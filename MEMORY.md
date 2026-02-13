@@ -16,7 +16,7 @@ workspace/
 └── memory/         — дневные заметки (YYYY-MM-DD.md) + efrem.md
 ```
 Workspace в Dropbox: `~/Dropbox/openclaw-workspace/` (с 13.02.2026)
-Git: коммитить группами с понятными комментариями
+Git: коммитить группами с понятными комментариями + `git push origin main`
 
 ## Семья
 
