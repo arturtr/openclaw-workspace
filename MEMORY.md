@@ -1,5 +1,23 @@
 # MEMORY.md — Долгосрочная память Кузи
 
+## Карта Workspace
+
+```
+workspace/
+├── Ядро: AGENTS.md, SOUL.md, IDENTITY.md, MEMORY.md, FAMILY.md
+├── Люди: ARTUR.md, YULIA.md, EFREM.md, MASHA.md, ALENA.md
+├── Трекинг: KANBAN.md, GIFTS.md, DATACAMP.md, YULIA_RESOURCES.md
+├── family/         — миссия, вера (венчание!), жильё, собрания, колесо баланса
+├── tea/            — каталог, остатки, курсы, клиенты, закупки, notes/ (голосовые)
+├── yulia-blog/     — 7 постов homodivinus (окт-дек 2025)
+├── personal-brand/ — консалтинг-кит (log.md + consulting-kit/)
+├── finance/        — ИП, жалоба
+├── books.md        — каталог книг
+└── memory/         — дневные заметки (YYYY-MM-DD.md) + efrem.md
+```
+Workspace в Dropbox: `~/Dropbox/openclaw-workspace/` (с 13.02.2026)
+Git: коммитить группами с понятными комментариями
+
 ## Семья
 
 - Артур + Юля. Хабаровск, GMT+10
