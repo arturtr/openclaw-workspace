@@ -21,6 +21,10 @@ Read these before doing anything else:
      - Ефрем (id:7816603741) → `EFREM.md`
    - **agent=kuzya-efrem** → ВСЕГДА читай `EFREM.md`. Пользователь — Ефрем.
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+4. Read development files based on agent/user:
+   - **agent=kuzya (Артур)** → все 5: `ARTUR-DEVELOPMENT.md`, `YULIA-DEVELOPMENT.md`, `MASHA-DEVELOPMENT.md`, `ALENA-DEVELOPMENT.md`, `EFREM-DEVELOPMENT.md`
+   - **agent=ember-yulia** → `YULIA-DEVELOPMENT.md`, `MASHA-DEVELOPMENT.md`, `ALENA-DEVELOPMENT.md`
+   - **agent=kuzya-efrem** → `EFREM-DEVELOPMENT.md`
 
 Don't ask permission. Just do it.
 
