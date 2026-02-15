@@ -4,17 +4,60 @@
 
 ```
 workspace/
-├── Ядро: AGENTS.md, SOUL.md, IDENTITY.md, MEMORY.md, FAMILY.md
-├── Люди: ARTUR.md, YULIA.md, EFREM.md, MASHA.md, ALENA.md
-├── Трекинг: KANBAN.md, GIFTS.md, DATACAMP.md, YULIA_RESOURCES.md
-├── family/         — миссия, вера (венчание!), жильё, собрания, колесо баланса
-├── tea/            — каталог, остатки, курсы, клиенты, закупки, notes/ (голосовые)
-├── yulia-blog/     — 7 постов homodivinus (окт-дек 2025)
-├── personal-brand/ — консалтинг-кит (log.md + consulting-kit/)
-├── finance/        — ИП, жалоба
-├── books.md        — каталог книг
-└── memory/         — дневные заметки (YYYY-MM-DD.md) + efrem.md
+├── 🔧 Ядро (читается автоматически)
+│   ├── AGENTS.md, SOUL.md, IDENTITY.md, MEMORY.md
+│   ├── FAMILY.md, ARTUR.md, YULIA.md, EFREM.md, MASHA.md, ALENA.md
+│   └── HEARTBEAT.md, TOOLS.md, USER.md
+│
+├── 📈 Развитие (читать на старте по AGENTS.md)
+│   ├── ARTUR-DEVELOPMENT.md    — план развития Артура
+│   ├── YULIA-DEVELOPMENT.md    — план развития Юли
+│   ├── MASHA-DEVELOPMENT.md    — план развития Маши
+│   ├── ALENA-DEVELOPMENT.md    — план развития Алёны
+│   └── EFREM-DEVELOPMENT.md    — план развития Ефрема
+│
+├── 📋 Трекинг
+│   ├── KANBAN.md               — семейный канбан (задачи в работе)
+│   ├── GIFTS.md                — знаки внимания для Юли + лог
+│   ├── DATACAMP.md             — курсы Артура + BABOK
+│   └── YULIA_RESOURCES.md      — ресурсы/материалы для Юли
+│
+├── 🏠 family/                  — семейные проекты
+│   ├── mission.md              — семейная миссия
+│   ├── 2026-start.md           — планы на 2026
+│   ├── balance-wheel.md        — колесо баланса
+│   ├── home-church.md          — 🆕 домашняя школа веры (старт 17.02!)
+│   ├── family-kitchen.md       — кухня, меню, философия (в корне!)
+│   ├── faith/                  — вера: венчание, молитвы, календарь, традиции, чтение
+│   ├── housing/                — жильё: критерии + листинги (наши + родители)
+│   └── meetings/               — собрания: шаблоны, решения, архив
+│
+├── 🍵 tea/                     — чайный проект
+│   ├── catalog.md, inventory.md, favorites.md — каталог, остатки, любимые
+│   ├── clients/chayfm-waitlist.md — 🔥 СПИСОК КЛИЕНТОВ Чай•fm
+│   ├── clients/evgeniy-shvalov.md
+│   ├── courses.md, sales.md    — курсы, продажи
+│   ├── notes/                  — чайные заметки (дегустации)
+│   ├── purchases/              — закупки
+│   └── prompts/                — промпты для анализа
+│
+├── ✍️ prompts/                 — промпты Юли
+│   └── pробуждение-музы-final.md
+│
+├── 📝 yulia-blog/              — 7 постов @homodivinus (окт-дек 2025)
+├── 💼 personal-brand/          — тулбокс для микробизнесов (log.md + consulting-kit/)
+├── 💰 finance/                 — ИП, жалоба
+├── 📚 books.md                 — каталог книг
+├── 📄 google-gemini-guide-ru.md — гайд Gemini (переведён)
+│
+└── 🧠 memory/                  — дневные заметки
+    ├── YYYY-MM-DD.md           — события дня (читать сегодня + вчера)
+    ├── efrem.md                — заметки про Ефрема
+    └── why-not-month-*.md      — заметки Why Not Month
 ```
+
+**Правило:** при создании нового файла → обновить эту карту + добавить ссылку в соответствующий раздел MEMORY.md.
+
 Workspace в Dropbox: `~/Dropbox/openclaw-workspace/` (с 13.02.2026)
 Git: коммитить группами с понятными комментариями + `git push origin main`
 
@@ -69,6 +112,13 @@ Git: коммитить группами с понятными коммента�
 - Можно добавлять: книги, свечи, финики, керамику — начать с чая
 - Рост: друзья бесплатно → розыгрыши → платные сеты → подписка
 - Первый пост привязан к 14 февраля 2026
+
+## Чай•fm — ЗАПУЩЕН 14.02.2026 🍵
+
+- Первый пост опубликован Юлей в @homodivinus (День Валентина)
+- **Список клиентов:** `tea/clients/chayfm-waitlist.md` — ВСЕГДА проверять при новых откликах
+- Первый клиент: Катя (сестра Артура)
+- Когда кто-то пишет «хочу чай» / «хочу попробовать» / откликается на Чай•fm → добавлять в waitlist
 
 ## Чайный проект (Артур)
 
