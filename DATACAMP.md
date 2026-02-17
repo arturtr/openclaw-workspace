@@ -8,8 +8,8 @@
 
 **Supply Chain Analytics in Python** (4ч)
 - Ссылка: https://www.datacamp.com/courses/supply-chain-analytics-in-python
-- Статус: ⏳ не начат
-- Прогресс: 0/4 главы
+- Статус: 🔄 в процессе
+- Прогресс: 1/4 главы
 
 ## Очередь
 
@@ -26,7 +26,8 @@
 
 ## BABOK v3
 
-- Текущий: **Ch 1-2** (What is BA + Core Concept Model) — ⏳ не начат
+- ✅ Ch 1-2 (What is BA + Core Concept Model)
+- ✅ Ch 6.0 (Strategy Analysis — обзор)
 - Следующий: Ch 6.1 (Analyze Current State)
 - Техники: 10.35 Process Modeling, 10.40 Root Cause Analysis, 10.28 Metrics/KPIs
 
