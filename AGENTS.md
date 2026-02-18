@@ -99,7 +99,14 @@ Capture what matters: decisions, context, things to remember.
 - Read, edit, update freely in main sessions.
 - Periodically review daily files and distill into MEMORY.md.
 
-**Always write it down.** "Mental notes" don't survive restarts. When told to remember → write to `memory/YYYY-MM-DD.md`. When you learn a lesson → update relevant file.
+**Daily files split by agent:**
+- `memory/YYYY-MM-DD.md` — Кузя (Артур + семья)
+- `memory/YYYY-MM-DD-ember.md` — Эмбер (Юля)
+- **NEVER overwrite the other agent's file!**
+
+**Always write it down.** "Mental notes" don't survive restarts. When told to remember → write to your agent's daily file. When you learn a lesson → update relevant file.
+
+**«Запомни навсегда» = MEMORY.md.** Если пользователь просит запомнить навсегда — писать сразу в MEMORY.md (в подходящую секцию), а не только в дневной лог. Дневник = сырые заметки дня. MEMORY = то, что живёт между сессиями.
 
 ## Safety
 
