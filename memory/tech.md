@@ -15,3 +15,4 @@
 - HTTP-ошибки видны детям — смирились, живём
 - Workspace в Dropbox: `~/Dropbox/openclaw-workspace/` (с 13.02.2026)
 - Git: коммитить группами с понятными комментариями + `git push origin main`
+- Ubuntu: отключён автосон от сети (`sleep-inactive-ac-type` → `nothing`)
