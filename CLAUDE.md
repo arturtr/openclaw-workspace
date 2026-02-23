@@ -4,73 +4,129 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Workspace Is
 
-Personal AI system for Artur Trofimov's family. Not a software project — a life management system using git + markdown as persistent memory. Two specialized agents operate here: **Kuzya** (family, home, children) and **Ember** (Yulia's coaching and business).
+Two things in one place:
 
-## Agent Startup
+1. **Personal AI system** — markdown-based knowledge base and memory for AI agents (Kuzya, Ember)
+2. **OpenClaw platform** — the software that runs those agents (source at `/home/artur/projects/openclaw`)
 
-Before anything else, read the relevant agent file:
+---
 
-- `agents/kuzya.md` — for sessions with Artur about family/home/daily life
-- `agents/ember.md` — for sessions as Ember with Yulia (agent=ember-yulia)
+## OpenClaw Platform (source code)
 
-These files contain the startup sequence. Follow it without asking permission.
+**Stack:** TypeScript, Node.js ≥22, pnpm workspaces
 
-Auto-loaded context each session: `SOUL.md`, `IDENTITY.md`, `MEMORY.md`, `AGENTS.md`.
+**Build:**
+```bash
+cd /home/artur/projects/openclaw
+pnpm install
+pnpm build          # TypeScript → ESM dist/ + React UI
+pnpm gateway:watch  # Dev mode with auto-reload
+```
 
-## Memory System
+**Test:**
+```bash
+pnpm test              # Unit tests (vitest)
+pnpm test:e2e          # E2E tests (gateway + channel mocking)
+# Live model tests require real API keys:
+pnpm test:live
+```
+
+**Architecture layers:**
+
+| Layer | Directory | Role |
+|-------|-----------|------|
+| CLI | `src/cli/`, `src/commands/` | Commands: gateway, agent, onboard, daemon, doctor |
+| Gateway | `src/gateway/` | WebSocket control plane — routes messages between channels and agents |
+| Agent runtime | `src/agents/` | Spawns Pi subprocess per session, streams tool calls and responses |
+| Channels | `src/channels/`, `extensions/` | Telegram, WhatsApp, Discord, Slack, Signal, iMessage, Matrix, etc. |
+| Tools | `src/browser/`, `src/canvas-host/` | Browser (CDP), Canvas (A2UI), Nodes (device actions), Cron |
+| Memory | `src/memory/` | SQLite vector DB per agent (`~/.openclaw/memory/*.sqlite`) |
+| Plugin SDK | `src/plugin-sdk/`, `extensions/` | ~35 channel plugins, swappable memory backends |
+| Web UI | `ui/` | React + Vite dashboard, WebChat, Canvas renderer |
+
+**Request flow:** Channel inbound → Gateway routes by binding → Agent spawns Pi → Pi calls model → streams back → Gateway → Channel outbound
+
+**Config:** `~/.openclaw/openclaw.json` (Zod-validated). Agents defined under `agents.list`; channel routing under `bindings`; tool deny-list under `tools.deny`.
+
+**Agents in this installation:**
+- `kuzya` (default) — Artur, family, home
+- `ember-yulia` — Yulia's coaching and business
+- `kuzya-efrem` — Efrem sessions
+
+**Daemon:**
+```bash
+openclaw daemon install   # systemd (Linux) or launchd (macOS)
+openclaw gateway          # foreground
+```
+
+---
+
+## Agent System (this workspace)
+
+### Startup
+
+Read the agent file before anything else:
+- `agents/kuzya.md` — sessions with Artur (family/home/daily life)
+- `agents/ember.md` — sessions as Ember with Yulia (agent=ember-yulia)
+
+Auto-loaded each session: `SOUL.md`, `IDENTITY.md`, `MEMORY.md`, `AGENTS.md`.
+
+### Memory System
 
 Files are the only continuity between sessions. Mental notes don't survive restarts.
 
 **Daily notes:**
 - `memory/YYYY-MM-DD.md` — Kuzya sessions
 - `memory/YYYY-MM-DD-ember.md` — Ember sessions
-- Read today + yesterday on startup. **Never overwrite the other agent's file.**
+- Read today + yesterday on startup. Never overwrite the other agent's file.
 
 **Thematic memory** (load by context):
-- `memory/family.md` — family dates, relationships
-- `memory/yulia-profile.md` — Yulia's mission, preferences, schedule
-- `memory/kids.md` — children: tokens, school, rituals
-- `memory/tea.md` — tea brand (Чай•fm)
-- `memory/tech.md` — Telegram IDs, bots
+
+| File | Topic |
+|------|-------|
+| `memory/family.md` | Family dates, relationships |
+| `memory/yulia-profile.md` | Yulia's mission, preferences, schedule |
+| `memory/kids.md` | Children: tokens, school, rituals |
+| `memory/tea.md` | Tea brand (Чай•fm) |
+| `memory/tech.md` | Telegram IDs, bots |
+| `memory/my-career.md` | Yulia's career map (natal chart) |
 
 **Memory rules:**
 - User explains something with effort → write to thematic file immediately, not just daily note
-- User says "запомни навсегда" → thematic file only
+- "Запомни навсегда" → thematic file only (not daily note)
 - Every file change → git commit
 - New file → update workspace map in `MEMORY.md`
 
-## Git Conventions
+### Git Conventions
 
 - Commit after every meaningful change
 - Messages in Russian, information-first: verb + what changed
-- Max 50 chars subject line, no period
+- Max 50 chars, no period
 - Example: `22.02: правила общения с Юлей — что помнить Эмбер`
 
-## Python Scripts
+### Python Scripts
 
-Content generation for homodivinus.ru blog:
-
+Content generation for homodivinus.ru:
 ```bash
-python3 homodivinus/create_docx.py       # markdown → .docx
-python3 homodivinus/build_final_docx.py  # final .docx with articles + social cards
+python3 homodivinus/create_docx.py        # markdown → .docx
+python3 homodivinus/build_final_docx.py   # .docx with articles + social cards
 ```
 
 Requires `python-docx`. Use `uv run --with python-docx python3 script.py` if not installed.
 
-## Safety Rules
+### Safety Rules
 
-- `trash` over `rm` for destructive operations
+- `trash` over `rm`
 - Ask before: emails, public posts, anything leaving the machine
 - Read freely: files, web, workspace exploration
 - Never share private data from this workspace externally
-- Don't run destructive commands without asking
 
-## Key Files
+### Key Files
 
 | File | Purpose |
 |------|---------|
-| `SOUL.md` | Core AI principles — read to understand expected behavior |
-| `IDENTITY.md` | Kuzya's persona as домовой |
+| `SOUL.md` | Core AI principles |
+| `IDENTITY.md` | Kuzya's persona |
 | `FAMILY.md` | Family structure, values, routines |
 | `ARTUR.md`, `YULIA.md` | Primary user profiles |
 | `KANBAN.md` | Active project board |
