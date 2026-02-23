@@ -121,6 +121,56 @@ Requires `python-docx`. Use `uv run --with python-docx python3 script.py` if not
 - Read freely: files, web, workspace exploration
 - Never share private data from this workspace externally
 
+---
+
+## Operations & Debugging
+
+### Config & Secrets
+
+`~/.openclaw/openclaw.json` — Zod-validated, `.strict()`. Auth profiles only allow `provider`, `mode`, `email`. **No token fields.**
+
+API keys live in `~/.openclaw/.env` as `PROVIDER_API_KEY`:
+```
+ANTHROPIC_API_KEY=...
+OPENAI_API_KEY=...
+GROQ_API_KEY=...        # audio transcription via whisper-large-v3-turbo
+```
+
+After editing either file: `systemctl --user restart openclaw-gateway`
+
+Update openclaw: `openclaw update` (run from any directory)
+
+### Diagnosing Failures
+
+| What to check | Where |
+|---------------|-------|
+| Gateway logs (live) | `systemctl --user status openclaw-gateway` |
+| Session history | `~/.openclaw/agents/*/sessions/*.jsonl` |
+| Cron run results | `~/.openclaw/cron/runs/*.jsonl` |
+| Stuck outbound messages | `~/.openclaw/delivery-queue/` |
+| Cron job definitions | `~/.openclaw/cron/jobs.json` |
+
+**Common failures:**
+- `sendMessage failed: Network request failed` — transient Telegram API blip. Message was generated but not delivered. Check latest session `.jsonl`, extract assistant response, resend via Telegram Bot API.
+- `All models failed: rate_limit` in cron runs — Anthropic rate limit cascade. All three fallbacks (opus/sonnet/haiku) share one account and all enter cooldown together. Concurrent cron tasks at 20:00/21:00 can trigger this.
+- `cron announce delivery failed` — gateway couldn't send the job completion notification. Check `delivery-queue/` for stuck entries.
+
+### Resending a Stuck Message
+
+```python
+import json, urllib.request, urllib.parse
+cfg = json.load(open('/home/artur/.openclaw/openclaw.json'))
+token = cfg['channels']['telegram']['accounts']['kuzya']['botToken']
+data = urllib.parse.urlencode({'chat_id': '1072324', 'text': '...', 'parse_mode': 'Markdown'}).encode()
+urllib.request.urlopen(urllib.request.Request(f'https://api.telegram.org/bot{token}/sendMessage', data=data))
+```
+
+### Audio Transcription
+
+Uses Groq (`whisper-large-v3-turbo`) via `GROQ_API_KEY`. Auto-detected — no config needed beyond the env var.
+
+`faster-whisper` is installed as a Python library in `~/.openclaw/tools/` but openclaw needs a `whisper` CLI binary — the library alone is not used.
+
 ### Key Files
 
 | File | Purpose |
