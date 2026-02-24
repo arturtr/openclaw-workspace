@@ -13,7 +13,9 @@ Two things in one place:
 
 ## OpenClaw Platform (source code)
 
-**Stack:** TypeScript, Node.js ≥22, pnpm workspaces
+**Stack:** TypeScript, Node.js ≥24, pnpm workspaces
+
+**Runtime:** Node 24 + pnpm managed via mise (`~/.config/mise/config.toml`). After Node changes: `openclaw daemon install --force` to update systemd unit. Node <24 gives `fts unavailable: no such module: fts5` in memory status.
 
 **Build:**
 ```bash
@@ -52,6 +54,7 @@ pnpm test:live
 - `kuzya` (default) — Artur, family, home
 - `ember-yulia` — Yulia's coaching and business
 - `kuzya-efrem` — Efrem sessions
+- `kuzya-masha` — Masha sessions (book cataloging)
 
 **Daemon:**
 ```bash
