@@ -96,6 +96,7 @@ Files are the only continuity between sessions. Mental notes don't survive resta
 - "Запомни навсегда" → thematic file only (not daily note)
 - Every file change → git commit
 - New file → update workspace map in `MEMORY.md`
+- **Double-write rule**: creating a file in a subdirectory (e.g., `tea/clients/`) requires updating the corresponding thematic summary (e.g., `memory/tea.md`) in the same session — Kuzya reads summaries, not subdirectories
 
 ### Git Conventions
 
