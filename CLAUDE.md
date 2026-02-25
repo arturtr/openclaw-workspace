@@ -158,6 +158,7 @@ Update openclaw: `openclaw update` (run from any directory)
 - `sendMessage failed: Network request failed` — transient Telegram API blip. Message was generated but not delivered. Check latest session `.jsonl`, extract assistant response, resend via Telegram Bot API.
 - `All models failed: rate_limit` in cron runs — Anthropic rate limit cascade. All three fallbacks (opus/sonnet/haiku) share one account and all enter cooldown together. Concurrent cron tasks at 20:00/21:00 can trigger this.
 - `cron announce delivery failed` — gateway couldn't send the job completion notification. Check `delivery-queue/` for stuck entries.
+- `sendMessage failed` repeated — check VPN: `ip route | grep tun0`. If tun0 has metric 50, it routes all traffic. Unstable VPN = Telegram down.
 
 ### Resending a Stuck Message
 
