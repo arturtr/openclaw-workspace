@@ -55,7 +55,9 @@ workspace/
 ├── 📋 KANBAN.md, GIFTS.md, DATACAMP.md, YULIA_RESOURCES.md
 ├── 🏠 family/ — семейные проекты
 ├── 🍵 tea/ — чайный проект
-├── ✍️ prompts/, 📝 yulia-blog/, 💼 personal-brand/
+├── 💼 personal-brand/ — бренд Юли
+├── 🗂️ consulting/ — аналитический консалтинг Артура
+├── ✍️ prompts/, 📝 yulia-blog/
 ├── 💰 finance/, 🥋 BJJ.md, 📚 books/
 └── 📄 google-gemini-guide-ru.md
 ```
