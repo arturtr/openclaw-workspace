@@ -93,6 +93,7 @@ Files are the only continuity between sessions. Mental notes don't survive resta
 | `memory/tea.md` | Tea brand (Чай•fm) |
 | `memory/tech.md` | Telegram IDs, bots |
 | `memory/my-career.md` | Yulia's career map (natal chart) |
+| `memory/chinese-vocab.md` | Chinese characters (tea, ТКМ, Ба Цзы) — add new ones here |
 
 **Memory rules:**
 - User explains something with effort → write to thematic file immediately, not just daily note
