@@ -212,3 +212,10 @@ Uses Groq (`whisper-large-v3-turbo`) via `GROQ_API_KEY`. Auto-detected — no co
 | `ARTUR.md`, `YULIA.md` | Primary user profiles |
 | `KANBAN.md` | Active project board |
 | `HEARTBEAT.md` | Cron tasks / scheduled reminders |
+
+### Finance & Contracts
+
+`finance/mellow/` — Mellow (FRWD Limited, HK) subcontractor relationship.
+
+- `agreement_template.pdf` — текущий шаблон договора (21 стр.)
+- `agreement-notes.md` — анализ ключевых условий + история изменений (блок `## vX.X` при каждом обновлении)
