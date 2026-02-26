@@ -143,7 +143,13 @@ GROQ_API_KEY=...        # audio transcription via whisper-large-v3-turbo
 
 After editing either file: `systemctl --user restart openclaw-gateway`
 
+Edit config safely: use `Edit` tool for targeted changes; use `python3 json.load/dump` only when structural changes (key rename, array item removal) make string replacement impractical.
+
+**Current models (as of 2026.2.25):** opus-4-6 (primary), sonnet-4-6 (fallback#1), haiku-4-5 (fallback#2). kuzya-efrem and kuzya-masha have per-agent model overrides in `agents.list` — update those separately when upgrading models.
+
 Update openclaw: `openclaw update` (run from any directory)
+
+Check active models: `openclaw models list`
 
 **Changelog after update:**
 ```bash
