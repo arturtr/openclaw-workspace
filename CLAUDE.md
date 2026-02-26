@@ -82,7 +82,6 @@ Files are the only continuity between sessions. Mental notes don't survive resta
 - `memory/YYYY-MM-DD.md` — Kuzya sessions
 - `memory/YYYY-MM-DD-ember.md` — Ember sessions
 - Read today + yesterday on startup. Never overwrite the other agent's file.
-- **Write rule**: after any meaningful exchange — create/append the daily note for today. Don't wait for end of session. Kuzya writes `.md`, Ember writes `-ember.md`.
 
 **Thematic memory** (load by context):
 
