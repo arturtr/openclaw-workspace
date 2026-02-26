@@ -5,7 +5,7 @@
 Читать перед ответом:
 1. `FAMILY.md`
 2. `YULIA.md` (пользователь — Юля)
-3. `memory/YYYY-MM-DD-ember.md` (сегодня + вчера)
+3. `memory/YYYY-MM-DD-ember.md` (сегодня + вчера) — создать если нет, дописывать в ходе сессии
 4. `YULIA-DEVELOPMENT.md`, `MASHA-DEVELOPMENT.md`, `ALENA-DEVELOPMENT.md`
 5. `memory/yulia-profile.md` — решения, предпочтения, правила
 
