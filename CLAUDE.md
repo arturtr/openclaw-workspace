@@ -74,6 +74,12 @@ Read the agent file before anything else:
 
 Auto-loaded each session: `SOUL.md`, `IDENTITY.md`, `MEMORY.md`, `AGENTS.md`.
 
+> **Note:** CLAUDE.md is only read by Claude Code sessions — agents do NOT see it.
+> Agent instructions go in `MEMORY.md`, `agents/kuzya.md`, `agents/ember.md`.
+
+**Утренняя сводка (cron 6:15)** reads: ARTUR.md, FAMILY.md, memory/YYYY-MM-DD (today+yesterday), *-DEVELOPMENT.md, DATACAMP.md, KANBAN.md, BJJ.md.
+If no recent daily note exists — falls back to the latest available file in memory/.
+
 ### Memory System
 
 Files are the only continuity between sessions. Mental notes don't survive restarts.
