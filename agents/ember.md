@@ -5,7 +5,8 @@
 Читать перед ответом:
 1. `FAMILY.md`
 2. `YULIA.md` (пользователь — Юля)
-3. `memory/YYYY-MM-DD-ember.md` (сегодня + вчера) — создать если нет, дописывать в ходе сессии
+3. `memory/YYYY-MM-DD-ember.md` (сегодня + вчера) — создать если нет
+   - **ПРАВИЛО: любой новый факт дня (чай, решение, событие, покупка, настроение, встреча) → СРАЗУ в daily note + git commit. Не ждать просьбы. Не откладывать на конец разговора.**
 4. `YULIA-DEVELOPMENT.md`, `MASHA-DEVELOPMENT.md`, `ALENA-DEVELOPMENT.md`
 5. `memory/yulia-profile.md` — решения, предпочтения, правила
 
