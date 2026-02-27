@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0f1117;
+  font-family: 'Inter', sans-serif;
+  color: #e8e4df;
+  padding: 44px 36px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #f0ece6;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 12px;
+  color: #5a6570;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+/* ===== SECTION 1: WEEK HEATMAP ===== */
+.section {
+  margin-bottom: 36px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #c4b8a8;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2a2d36;
+}
+
+/* Theme bars */
+.theme-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.theme-icon {
+  width: 28px;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.theme-label {
+  width: 100px;
+  font-size: 12px;
+  color: #8a837a;
+  flex-shrink: 0;
+}
+
+.theme-bar-bg {
+  flex: 1;
+  height: 20px;
+  background: #1a1d24;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+}
+
+.day-cell {
+  flex: 1;
+  border-radius: 2px;
+  position: relative;
+}
+
+.theme-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #5a6570;
+  width: 32px;
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+/* Day labels */
+.day-labels {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.day-labels-spacer { width: 136px; flex-shrink: 0; }
+
+.day-labels-row {
+  flex: 1;
+  display: flex;
+  gap: 2px;
+  padding: 0 3px;
+}
+
+.day-label {
+  flex: 1;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: #4a4d56;
+}
+
+.day-label-spacer { width: 40px; }
+
+/* ===== SECTION 2: STREAM OF NOTES ===== */
+.stream {
+  position: relative;
+  padding-left: 60px;
+}
+
+.stream::before {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #3a5a4a, #c4a050, #6b4a8a, #3a5a7a);
+  border-radius: 1px;
+}
+
+.stream-item {
+  position: relative;
+  margin-bottom: 18px;
+  background: #181b22;
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 1px solid #2a2d36;
+}
+
+.stream-item::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid;
+  background: #0f1117;
+}
+
+.stream-item.family::before { border-color: #c47a6a; }
+.stream-item.tea::before { border-color: #7cab6e; }
+.stream-item.faith::before { border-color: #c4a050; }
+.stream-item.idea::before { border-color: #6b8ac4; }
+.stream-item.kids::before { border-color: #d4a843; }
+.stream-item.bjj::before { border-color: #8a6ac4; }
+.stream-item.bazi::before { border-color: #c46a8a; }
+
+.stream-date {
+  position: absolute;
+  left: -60px;
+  top: 15px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #5a6570;
+  text-align: right;
+  width: 18px;
+}
+
+.stream-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.stream-tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.tag-family { background: #2a1a18; color: #c47a6a; }
+.tag-tea { background: #1a2a1a; color: #7cab6e; }
+.tag-faith { background: #2a2418; color: #c4a050; }
+.tag-idea { background: #1a2030; color: #6b8ac4; }
+.tag-kids { background: #2a2418; color: #d4a843; }
+.tag-bjj { background: #201a2a; color: #8a6ac4; }
+.tag-bazi { background: #2a1a22; color: #c46a8a; }
+
+.stream-text {
+  font-size: 13px;
+  color: #c4b8a8;
+  line-height: 1.5;
+}
+
+.stream-text em {
+  color: #e8e4df;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.stream-original {
+  font-size: 11px;
+  color: #5a6570;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #22252c;
+  font-style: italic;
+}
+
+.stream-original::before {
+  content: '📝 ';
+}
+
+/* ===== SECTION 3: WU XING BALANCE ===== */
+.wuxing-grid {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.wuxing-elem {
+  width: 120px;
+  text-align: center;
+  background: #181b22;
+  border-radius: 12px;
+  padding: 16px 12px;
+  border: 1px solid #2a2d36;
+}
+
+.wuxing-char {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.wuxing-name {
+  font-size: 11px;
+  color: #8a837a;
+  margin-bottom: 10px;
+}
+
+.wuxing-bar-v {
+  width: 24px;
+  height: 60px;
+  background: #1a1d24;
+  border-radius: 4px;
+  margin: 0 auto 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wuxing-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 4px;
+}
+
+.wuxing-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #6b6560;
+}
+
+.wuxing-items {
+  font-size: 10px;
+  color: #5a6570;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid #2a2d36;
+}
+
+.footer-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: #c4a050;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.footer-note {
+  font-size: 11px;
+  color: #4a4d56;
+}
+</style>
+</head>
+<body>
+
+<h1>Февраль Артура в данных</h1>
+<p class="subtitle">12–27 февраля 2026 · из заметок Кузи</p>
+
+<!-- SECTION 1: THEME HEATMAP -->
+<div class="section">
+  <div class="section-title">На что уходило внимание</div>
+
+  <div class="day-labels">
+    <div class="day-labels-spacer"></div>
+    <div class="day-labels-row">
+      <div class="day-label">12</div>
+      <div class="day-label">13</div>
+      <div class="day-label">14</div>
+      <div class="day-label">···</div>
+      <div class="day-label">22</div>
+      <div class="day-label">···</div>
+      <div class="day-label">27</div>
+    </div>
+    <div class="day-label-spacer"></div>
+  </div>
+
+  <!-- Family -->
+  <div class="theme-row">
+    <div class="theme-icon">👨‍👩‍👧‍👦</div>
+    <div class="theme-label">Семья</div>
+    <div class="theme-bar-bg">
+      <div class="day-cell" style="background:rgba(196,122,106,0.8)"></div>
+      <div class="day-cell" style="background:rgba(196,122,106,0.6)"></div>
+      <div class="day-cell" style="background:rgba(196,122,106,0.9)"></div>
+      <div class="day-cell" style="background:rgba(196,122,106,0.3)"></div>
+      <div class="day-cell" style="background:rgba(196,122,106,0.7)"></div>
+      <div class="day-cell" style="background:rgba(196,122,106,0.3)"></div>
+      <div class="day-cell" style="background:rgba(196,122,106,0.6)"></div>
+    </div>
+    <div class="theme-count">━━━</div>
+  </div>
+
+  <!-- Tea -->
+  <div class="theme-row">
+    <div class="theme-icon">🍵</div>
+    <div class="theme-label">Чай</div>
+    <div class="theme-bar-bg">
+      <div class="day-cell" style="background:rgba(124,171,110,0.4)"></div>
+      <div class="day-cell" style="background:rgba(124,171,110,0.2)"></div>
+      <div class="day-cell" style="background:rgba(124,171,110,0.7)"></div>
+      <div class="day-cell" style="background:rgba(124,171,110,0.3)"></div>
+      <div class="day-cell" style="background:rgba(124,171,110,0.9)"></div>
+      <div class="day-cell" style="background:rgba(124,171,110,0.3)"></div>
+      <div class="day-cell" style="background:rgba(124,171,110,0.6)"></div>
+    </div>
+    <div class="theme-count">━━</div>
+  </div>
+
+  <!-- Faith -->
+  <div class="theme-row">
+    <div class="theme-icon">⛪</div>
+    <div class="theme-label">Вера</div>
+    <div class="theme-bar-bg">
+      <div class="day-cell" style="background:rgba(196,160,80,0.3)"></div>
+      <div class="day-cell" style="background:rgba(196,160,80,0.2)"></div>
+      <div class="day-cell" style="background:rgba(196,160,80,0.8)"></div>
+      <div class="day-cell" style="background:rgba(196,160,80,0.3)"></div>
+      <div class="day-cell" style="background:rgba(196,160,80,0.9)"></div>
+      <div class="day-cell" style="background:rgba(196,160,80,0.3)"></div>
+      <div class="day-cell" style="background:rgba(196,160,80,0.7)"></div>
+    </div>
+    <div class="theme-count">━━</div>
+  </div>
+
+  <!-- Kids -->
+  <div class="theme-row">
+    <div class="theme-icon">👧</div>
+    <div class="theme-label">Дети</div>
+    <div class="theme-bar-bg">
+      <div class="day-cell" style="background:rgba(212,168,67,0.3)"></div>
+      <div class="day-cell" style="background:rgba(212,168,67,0.7)"></div>
+      <div class="day-cell" style="background:rgba(212,168,67,0.9)"></div>
+      <div class="day-cell" style="background:rgba(212,168,67,0.2)"></div>
+      <div class="day-cell" style="background:rgba(212,168,67,0.4)"></div>
+      <div class="day-cell" style="background:rgba(212,168,67,0.2)"></div>
+      <div class="day-cell" style="background:rgba(212,168,67,0.8)"></div>
+    </div>
+    <div class="theme-count">━━</div>
+  </div>
+
+  <!-- Ba Zi / Systems -->
+  <div class="theme-row">
+    <div class="theme-icon">🔮</div>
+    <div class="theme-label">Ба Цзы</div>
+    <div class="theme-bar-bg">
+      <div class="day-cell" style="background:rgba(196,106,138,0.9)"></div>
+      <div class="day-cell" style="background:rgba(196,106,138,0.2)"></div>
+      <div class="day-cell" style="background:rgba(196,106,138,0.3)"></div>
+      <div class="day-cell" style="background:rgba(196,106,138,0.2)"></div>
+      <div class="day-cell" style="background:rgba(196,106,138,0.2)"></div>
+      <div class="day-cell" style="background:rgba(196,106,138,0.2)"></div>
+      <div class="day-cell" style="background:rgba(196,106,138,0.9)"></div>
+    </div>
+    <div class="theme-count">━</div>
+  </div>
+
+  <!-- BJJ -->
+  <div class="theme-row">
+    <div class="theme-icon">🥋</div>
+    <div class="theme-label">BJJ</div>
+    <div class="theme-bar-bg">
+      <div class="day-cell" style="background:rgba(138,106,196,0.3)"></div>
+      <div class="day-cell" style="background:rgba(138,106,196,0.2)"></div>
+      <div class="day-cell" style="background:rgba(138,106,196,0.2)"></div>
+      <div class="day-cell" style="background:rgba(138,106,196,0.2)"></div>
+      <div class="day-cell" style="background:rgba(138,106,196,0.6)"></div>
+      <div class="day-cell" style="background:rgba(138,106,196,0.2)"></div>
+      <div class="day-cell" style="background:rgba(138,106,196,0.2)"></div>
+    </div>
+    <div class="theme-count">━</div>
+  </div>
+
+  <!-- Ideas -->
+  <div class="theme-row">
+    <div class="theme-icon">💡</div>
+    <div class="theme-label">Идеи</div>
+    <div class="theme-bar-bg">
+      <div class="day-cell" style="background:rgba(107,138,196,0.2)"></div>
+      <div class="day-cell" style="background:rgba(107,138,196,0.3)"></div>
+      <div class="day-cell" style="background:rgba(107,138,196,0.5)"></div>
+      <div class="day-cell" style="background:rgba(107,138,196,0.2)"></div>
+      <div class="day-cell" style="background:rgba(107,138,196,0.8)"></div>
+      <div class="day-cell" style="background:rgba(107,138,196,0.2)"></div>
+      <div class="day-cell" style="background:rgba(107,138,196,0.5)"></div>
+    </div>
+    <div class="theme-count">━</div>
+  </div>
+</div>
+
+<!-- SECTION 2: STREAM -->
+<div class="section">
+  <div class="section-title">Поток: что было важным</div>
+
+  <div class="stream">
+    <div class="stream-item bazi">
+      <div class="stream-date">12</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-bazi">🔮 Ба Цзы</span>
+      </div>
+      <div class="stream-text">
+        Разобрал все такты удачи 大运 от 4 до 63 лет. Сейчас — <em>丙子, Семь Убийц</em>: трансформация через давление. С 2029 — <em>乙亥, Печать</em>: учитель, наставник, признание.
+      </div>
+      <div class="stream-original">2026–2028 = окно закладки фундамента (чай, курсы, бренд)</div>
+    </div>
+
+    <div class="stream-item family">
+      <div class="stream-date">13</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-family">👨‍👩‍👧‍👦 Семья</span>
+      </div>
+      <div class="stream-text">
+        Вспомнил, как в студенчестве ухаживал за Юлей: <em>открытки, фенечки, шил ёжика</em>. Юля сказала: «за ней так никто никогда не ухаживал». Создал файл подарков.
+      </div>
+      <div class="stream-original">На 14.02 — нужен знак внимания для Юли</div>
+    </div>
+
+    <div class="stream-item kids">
+      <div class="stream-date">14</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-kids">👧 Дети</span>
+      </div>
+      <div class="stream-text">
+        ДР Ефрема. Расстроился: <em>«день испорчен, папа разговаривал с бабушкой вместо меня»</em>. Урок: в день ребёнка — телефон только для него.
+      </div>
+      <div class="stream-original">Маша и Алёна: первый урок интернет-безопасности. Алёна нарисовала «чужого дядьку»</div>
+    </div>
+
+    <div class="stream-item tea">
+      <div class="stream-date">14</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-tea">🍵 Чай</span>
+      </div>
+      <div class="stream-text">
+        Бай Хуа Бао Та 百花宝塔 — связанный чай с цветочком. Пирамидки раскрываются в чашке. <em>Запах весны, мёда</em>. Юле понравился.
+      </div>
+    </div>
+
+    <div class="stream-item faith">
+      <div class="stream-date">14</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-faith">⛪ Вера</span>
+      </div>
+      <div class="stream-text">
+        Запустил <em>домашнюю школу живой веры</em>. 4 недели: Бог рядом → молитва → святые → малая церковь. «Сразу всё не получится — будем адаптировать».
+      </div>
+    </div>
+
+    <div class="stream-item idea">
+      <div class="stream-date">22</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-idea">💡 Идея</span>
+      </div>
+      <div class="stream-text">
+        <em>Продюсерский центр для творцов на Дальнем Востоке</em>. Как Медичи финансировали художников → золотой век. Рабочее название: «Не Москва» / «Не Питер».
+      </div>
+      <div class="stream-original">Статус: идея на вырост, записать и дать побродить</div>
+    </div>
+
+    <div class="stream-item tea">
+      <div class="stream-date">22</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-tea">🍵 Чай</span>
+      </div>
+      <div class="stream-text">
+        Дакэмп Чаепитие — тема «Благодарность». Прошло <em>великолепно</em>. Следующая встреча: 29.03, тема «Доверие», в ЖК «Культура» у Дениса Грося.
+      </div>
+      <div class="stream-original">Андрей Гудовцев купил 4 сорта — первая продажа ✅</div>
+    </div>
+
+    <div class="stream-item faith">
+      <div class="stream-date">22</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-faith">⛪ Вера</span>
+      </div>
+      <div class="stream-text">
+        Прощёное воскресенье. Мини-урок для девочек: Адам, Ева, прощение. <em>Вечерние семейные собрания со свечкой — детям нравится.</em>
+      </div>
+    </div>
+
+    <div class="stream-item bazi">
+      <div class="stream-date">27</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-bazi">🔮 У Син</span>
+      </div>
+      <div class="stream-text">
+        Колесо Грося по У Син: цепь рвётся на <em>木→火</em>. Копит знания, не выражает. Стратегия «Разжечь 丙» — считать «выходы Огня» в неделю.
+      </div>
+      <div class="stream-original">Зажёгся китайскими системами — хочет понять механику ритма стихий</div>
+    </div>
+
+    <div class="stream-item kids">
+      <div class="stream-date">27</div>
+      <div class="stream-header">
+        <span class="stream-tag tag-kids">👧 Маша</span>
+      </div>
+      <div class="stream-text">
+        Урок #3: <em>«Фотоохота — учимся видеть красоту»</em>. Телефон для творчества, не только мультиков. 5 красивых кадров дома + обсуждение приватности.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: WU XING BALANCE -->
+<div class="section">
+  <div class="section-title">Баланс У Син в заметках февраля</div>
+
+  <div class="wuxing-grid">
+    <div class="wuxing-elem">
+      <div class="wuxing-char">🌳</div>
+      <div class="wuxing-name">木 Дерево</div>
+      <div class="wuxing-bar-v">
+        <div class="wuxing-fill" style="height:75%; background: linear-gradient(0deg, #3a5a3a, #7cab6e);"></div>
+      </div>
+      <div class="wuxing-label">знания, рост</div>
+      <div class="wuxing-items">Ба Цзы · системы<br>школа веры · уроки</div>
+    </div>
+
+    <div class="wuxing-elem" style="border-color: #c47a3a;">
+      <div class="wuxing-char">🔥</div>
+      <div class="wuxing-name">火 Огонь</div>
+      <div class="wuxing-bar-v">
+        <div class="wuxing-fill" style="height:40%; background: linear-gradient(0deg, #8a3a2a, #c47a3a);"></div>
+      </div>
+      <div class="wuxing-label" style="color:#c47a3a;">⚠️ слабое звено</div>
+      <div class="wuxing-items">чаепития · идеи<br>выражение · блог?</div>
+    </div>
+
+    <div class="wuxing-elem">
+      <div class="wuxing-char">⛰️</div>
+      <div class="wuxing-name">土 Земля</div>
+      <div class="wuxing-bar-v">
+        <div class="wuxing-fill" style="height:90%; background: linear-gradient(0deg, #5a4a3a, #c4a050);"></div>
+      </div>
+      <div class="wuxing-label">фундамент</div>
+      <div class="wuxing-items">семья · дети · вера<br>дом · ритуалы · свечки</div>
+    </div>
+
+    <div class="wuxing-elem">
+      <div class="wuxing-char">⚔️</div>
+      <div class="wuxing-name">金 Металл</div>
+      <div class="wuxing-bar-v">
+        <div class="wuxing-fill" style="height:55%; background: linear-gradient(0deg, #4a4a5a, #8a8aa4);"></div>
+      </div>
+      <div class="wuxing-label">структура</div>
+      <div class="wuxing-items">BJJ · канбан<br>файлы · планы</div>
+    </div>
+
+    <div class="wuxing-elem">
+      <div class="wuxing-char">💧</div>
+      <div class="wuxing-name">水 Вода</div>
+      <div class="wuxing-bar-v">
+        <div class="wuxing-fill" style="height:60%; background: linear-gradient(0deg, #2a3a5a, #4a7aaa);"></div>
+      </div>
+      <div class="wuxing-label">глубина</div>
+      <div class="wuxing-items">чай · созерцание<br>переезд · мечты</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="footer-quote">«Копит знания, не выражает. Цепь рвётся на 木→火»</p>
+  <p class="footer-note">Данные из заметок Кузи · 12–27 февраля 2026 · визуализация для Юли</p>
+</div>
+
+</body>
+</html>

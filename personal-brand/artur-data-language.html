@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #0f1117;
+  font-family: 'Inter', sans-serif;
+  color: #e8e4df;
+  padding: 48px 40px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 6px;
+  color: #f0ece6;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #6b6560;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.intro {
+  text-align: center;
+  font-size: 14px;
+  color: #8a837a;
+  margin-bottom: 44px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro em {
+  color: #c4b8a8;
+  font-style: normal;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+  margin-bottom: 28px;
+  background: #181b22;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #2a2d36;
+}
+
+.left {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid #2a2d36;
+  background: #14161c;
+}
+
+.label-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #5a6570;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.text-note {
+  font-size: 18px;
+  font-weight: 600;
+  color: #d4cec4;
+  line-height: 1.4;
+}
+
+.text-note .emoji {
+  font-size: 22px;
+  margin-right: 6px;
+}
+
+.right {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.data-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #f0ece6;
+}
+
+/* ---- TEA CHART ---- */
+.tea-map {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.tea-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.tea-legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.tea-legend span {
+  font-size: 10px;
+  color: #6b6560;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tea-legend .dot-sm {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ---- BJJ GRAPH ---- */
+.bjj-graph {
+  position: relative;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.bjj-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bjj-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #5a6570;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.bjj-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.bjj-label {
+  font-size: 10px;
+  color: #8a837a;
+  text-align: center;
+  max-width: 80px;
+  line-height: 1.3;
+}
+
+/* ---- CITY VIS ---- */
+.city-compare {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  gap: 0;
+  align-items: center;
+}
+
+.city-col {
+  text-align: center;
+}
+
+.city-name-vis {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.city-stat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #8a837a;
+  margin-bottom: 4px;
+}
+
+.city-stat .val {
+  color: #d4cec4;
+  font-weight: 500;
+}
+
+.city-arrow {
+  font-size: 24px;
+  color: #3a5a4a;
+}
+
+/* ---- FAITH TIMELINE ---- */
+.faith-timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.faith-timeline::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: linear-gradient(180deg, #4a3a2a, #8a6a3a, #c4a050, #f0d878);
+  border-radius: 1px;
+}
+
+.faith-point {
+  position: relative;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faith-point::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #c4a050;
+  background: #0f1117;
+}
+
+.faith-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #6b6560;
+  width: 36px;
+  flex-shrink: 0;
+}
+
+.faith-event {
+  font-size: 12px;
+  color: #c4b8a8;
+}
+
+/* ---- FOOTER ---- */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #2a2d36;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #5a6570;
+  line-height: 1.7;
+}
+
+.footer-text em {
+  color: #8a837a;
+  font-style: italic;
+}
+
+.footer-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #c4a050;
+  margin-top: 16px;
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+
+<h1>Данные как язык души</h1>
+<p class="subtitle">Артур · другой способ рассказывать о жизни</p>
+<p class="intro">
+  Одни люди пишут дневники. Другие рисуют. <em>Артур думает данными.</em><br>
+  Каждая заметка — не текст, а карта. Не история, а визуальное эссе.
+</p>
+
+<!-- ROW 1: TEA -->
+<div class="row">
+  <div class="left">
+    <div class="label-tag">📝 заметка текстом</div>
+    <div class="text-note"><span class="emoji">🍵</span>Пью чай 10 лет</div>
+  </div>
+  <div class="right">
+    <div class="label-tag">📊 на его языке</div>
+    <div class="data-title">10 лет чайных церемоний</div>
+    <div class="tea-map">
+      <!-- Greens (Lu, Longjing) -->
+      <div class="tea-dot" style="background:#7cab6e" title="зелёный"></div>
+      <div class="tea-dot" style="background:#7cab6e" title="зелёный"></div>
+      <div class="tea-dot" style="background:#7cab6e" title="зелёный"></div>
+      <!-- Oolongs -->
+      <div class="tea-dot" style="background:#c4a050" title="улун"></div>
+      <div class="tea-dot" style="background:#c4a050" title="улун"></div>
+      <div class="tea-dot" style="background:#c4a050" title="улун"></div>
+      <div class="tea-dot" style="background:#c4a050" title="улун"></div>
+      <!-- Pu-erh -->
+      <div class="tea-dot" style="background:#6b3a2a" title="пуэр"></div>
+      <div class="tea-dot" style="background:#6b3a2a" title="пуэр"></div>
+      <div class="tea-dot" style="background:#6b3a2a" title="пуэр"></div>
+      <div class="tea-dot" style="background:#6b3a2a" title="пуэр"></div>
+      <div class="tea-dot" style="background:#6b3a2a" title="пуэр"></div>
+      <!-- White -->
+      <div class="tea-dot" style="background:#e8dcc8" title="белый"></div>
+      <div class="tea-dot" style="background:#e8dcc8" title="белый"></div>
+      <!-- Red -->
+      <div class="tea-dot" style="background:#a04030" title="красный"></div>
+      <div class="tea-dot" style="background:#a04030" title="красный"></div>
+      <div class="tea-dot" style="background:#a04030" title="красный"></div>
+      <!-- More oolongs and pu-erhs for density -->
+      <div class="tea-dot" style="background:#c4a050"></div>
+      <div class="tea-dot" style="background:#6b3a2a"></div>
+      <div class="tea-dot" style="background:#7cab6e"></div>
+      <div class="tea-dot" style="background:#6b3a2a"></div>
+      <div class="tea-dot" style="background:#c4a050"></div>
+      <div class="tea-dot" style="background:#a04030"></div>
+      <div class="tea-dot" style="background:#e8dcc8"></div>
+      <div class="tea-dot" style="background:#6b3a2a"></div>
+      <div class="tea-dot" style="background:#c4a050"></div>
+      <div class="tea-dot" style="background:#7cab6e"></div>
+      <div class="tea-dot" style="background:#6b3a2a"></div>
+      <div class="tea-dot" style="background:#c4a050"></div>
+      <div class="tea-dot" style="background:#a04030"></div>
+      <div class="tea-dot" style="background:#6b3a2a"></div>
+    </div>
+    <div class="tea-legend">
+      <span><span class="dot-sm" style="background:#7cab6e"></span> зелёный</span>
+      <span><span class="dot-sm" style="background:#c4a050"></span> улун</span>
+      <span><span class="dot-sm" style="background:#6b3a2a"></span> пуэр</span>
+      <span><span class="dot-sm" style="background:#e8dcc8"></span> белый</span>
+      <span><span class="dot-sm" style="background:#a04030"></span> красный</span>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 2: BJJ -->
+<div class="row">
+  <div class="left">
+    <div class="label-tag">📝 заметка текстом</div>
+    <div class="text-note"><span class="emoji">🥋</span>BJJ — это про контроль</div>
+  </div>
+  <div class="right">
+    <div class="label-tag">📊 на его языке</div>
+    <div class="data-title">Отношение к контролю через тренировки</div>
+    <div class="bjj-graph">
+      <svg class="bjj-line" viewBox="0 0 400 80" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="bjj-grad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#c47a6a" />
+            <stop offset="40%" stop-color="#d4a843" />
+            <stop offset="100%" stop-color="#7cab6e" />
+          </linearGradient>
+        </defs>
+        <!-- Area fill -->
+        <path d="M0,70 C40,65 80,55 120,50 C160,45 180,60 220,40 C260,20 300,30 340,15 C360,10 380,8 400,5 L400,80 L0,80 Z" fill="url(#bjj-grad)" opacity="0.15" />
+        <!-- Line -->
+        <path d="M0,70 C40,65 80,55 120,50 C160,45 180,60 220,40 C260,20 300,30 340,15 C360,10 380,8 400,5" fill="none" stroke="url(#bjj-grad)" stroke-width="2.5" stroke-linecap="round" />
+        <!-- Dots -->
+        <circle cx="0" cy="70" r="4" fill="#c47a6a" />
+        <circle cx="120" cy="50" r="4" fill="#d4a843" />
+        <circle cx="220" cy="40" r="4" fill="#c4a050" />
+        <circle cx="340" cy="15" r="4" fill="#7cab6e" />
+        <circle cx="400" cy="5" r="4" fill="#7cab6e" />
+      </svg>
+    </div>
+    <div class="bjj-labels">
+      <div class="bjj-label">😤<br>контроль = сила</div>
+      <div class="bjj-label">🤔<br>сопротивление<br>не работает</div>
+      <div class="bjj-label">💡<br>отпустить =<br>получить</div>
+      <div class="bjj-label">🧘<br>контроль через<br>принятие</div>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 3: CITY -->
+<div class="row">
+  <div class="left">
+    <div class="label-tag">📝 заметка текстом</div>
+    <div class="text-note"><span class="emoji">🏠</span>Переехали в Хабаровск</div>
+  </div>
+  <div class="right">
+    <div class="label-tag">📊 на его языке</div>
+    <div class="data-title">Два города через призму семьи</div>
+    <div class="city-compare">
+      <div class="city-col">
+        <div class="city-name-vis">🏙 Прежний город</div>
+        <div class="city-stat">население <span class="val">—</span></div>
+        <div class="city-stat">друзья рядом <span class="val">12</span></div>
+        <div class="city-stat">км до моря <span class="val">∞</span></div>
+        <div class="city-stat">чувство дома <span class="val">██░░░</span></div>
+      </div>
+      <div style="text-align:center">
+        <div class="city-arrow">→</div>
+      </div>
+      <div class="city-col">
+        <div class="city-name-vis">🌏 Хабаровск</div>
+        <div class="city-stat">население <span class="val">617K</span></div>
+        <div class="city-stat">друзья рядом <span class="val">3</span></div>
+        <div class="city-stat">км до моря <span class="val">800</span></div>
+        <div class="city-stat">чувство дома <span class="val">███░░</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ROW 4: FAITH -->
+<div class="row">
+  <div class="left">
+    <div class="label-tag">📝 заметка текстом</div>
+    <div class="text-note"><span class="emoji">✝️</span>Я верю в Бога</div>
+  </div>
+  <div class="right">
+    <div class="label-tag">📊 на его языке</div>
+    <div class="data-title">Духовный путь как данные</div>
+    <div class="faith-timeline">
+      <div class="faith-point">
+        <span class="faith-year">···</span>
+        <span class="faith-event">Детство · бабушкин храм · запах ладана</span>
+      </div>
+      <div class="faith-point">
+        <span class="faith-year">···</span>
+        <span class="faith-event">Подростковый бунт · «зачем?»</span>
+      </div>
+      <div class="faith-point">
+        <span class="faith-year">···</span>
+        <span class="faith-event">Встреча · человек / книга / событие</span>
+      </div>
+      <div class="faith-point">
+        <span class="faith-year">···</span>
+        <span class="faith-event">Осознание · «это не про правила»</span>
+      </div>
+      <div class="faith-point">
+        <span class="faith-year">···</span>
+        <span class="faith-event">Сейчас · вера как фундамент, не фасад</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="footer-text">
+    Референсы: <em>Dear Data</em> (Giorgia Lupi) · <em>FlowingData</em> (Nathan Yau) · <em>The Pudding</em><br>
+    Данные — не таблицы. Данные — это то, как ты видишь мир.
+  </p>
+  <p class="footer-quote">«Расскажи мне факт — и я пойму тебя лучше, чем от тысячи слов»</p>
+</div>
+
+</body>
+</html>
