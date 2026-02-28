@@ -85,9 +85,11 @@ If no recent daily note exists — falls back to the latest available file in me
 Files are the only continuity between sessions. Mental notes don't survive restarts.
 
 **Daily notes:**
-- `memory/YYYY-MM-DD.md` — Kuzya sessions
-- `memory/YYYY-MM-DD-ember.md` — Ember sessions
-- Read today + yesterday on startup. Never overwrite the other agent's file.
+- `memory/YYYY-MM-DD.md` — Kuzya (основной агент)
+- `memory/YYYY-MM-DD-ember.md` — Ember (agent=ember-yulia)
+- `memory/YYYY-MM-DD-efrem.md` — Kuzya-Efrem (agent=kuzya-efrem)
+- `memory/YYYY-MM-DD-masha.md` — Kuzya-Masha (agent=kuzya-masha)
+- Read today + yesterday on startup. Never write to another agent's file.
 
 **Thematic memory** (load by context):
 
