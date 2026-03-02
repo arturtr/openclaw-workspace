@@ -185,6 +185,8 @@ git log --oneline v2026.X.XX..v2026.Y.YY   # commits between versions
   Cooldown: 1m → 5m → 25m → 60m (exponential). State: `~/.openclaw/agents/kuzya/auth-profiles.json`. To clear: delete `usageStats` fields or use `openclaw models status`. Since 2026.2.25: same-provider fallbacks are tried despite cooldown when reason=rate_limit.
 - `cron announce delivery failed` — gateway couldn't send the job completion notification. Check `delivery-queue/` for stuck entries.
 - `sendMessage failed` repeated — check VPN: `ip route | grep tun0`. If tun0 has metric 50, it routes all traffic. Unstable VPN = Telegram down.
+- `⚠️ Failed to download media. Please try again.` — VPN blip during Telegram media fetch (`TypeError: fetch failed`). openclaw has no retry. Workaround: resend the file.
+- `messages.N.content.1: thinking blocks cannot be modified` — session history pipeline modifies thinking block signatures. Occurs in long-running kuzya sessions with extended thinking in history. Fix: reset the affected session.
 
 ### Resending a Stuck Message
 
