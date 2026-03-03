@@ -13,6 +13,8 @@ Two things in one place:
 
 ## OpenClaw Platform (source code)
 
+**Source policy:** openclaw source (`/home/artur/projects/openclaw`) — read-only для Claude. Только config-изменения допустимы.
+
 **Stack:** TypeScript, Node.js ≥24, pnpm workspaces
 
 **Runtime:** Node 24 + pnpm managed via mise (`~/.config/mise/config.toml`). After Node changes: `openclaw daemon install --force` to update systemd unit. Node <24 gives `fts unavailable: no such module: fts5` in memory status.
@@ -174,7 +176,7 @@ git log --oneline v2026.X.XX..v2026.Y.YY   # commits between versions
 |---------------|-------|
 | Gateway logs (live) | `systemctl --user status openclaw-gateway` |
 | Telegram allowFrom per-account | `~/.openclaw/credentials/telegram-{account}-allowFrom.json` (с 2026.2.26 строго per-account) |
-| Session history | `~/.openclaw/agents/*/sessions/*.jsonl` |
+| Session history | `~/.openclaw/agents/*/sessions/*.jsonl` — search with `python3 -c "open('file','rb').read().find(b'pattern')"`, grep не находит JSON-escaped строки внутри `errorMessage` |
 | Cron run results | `~/.openclaw/cron/runs/*.jsonl` |
 | Stuck outbound messages | `~/.openclaw/delivery-queue/` |
 | Cron job definitions | `~/.openclaw/cron/jobs.json` |
