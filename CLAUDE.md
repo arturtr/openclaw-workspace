@@ -189,6 +189,9 @@ git log --oneline v2026.X.XX..v2026.Y.YY   # commits between versions
 - `sendMessage failed` repeated — check VPN: `ip route | grep tun0`. If tun0 has metric 50, it routes all traffic. Unstable VPN = Telegram down.
 - `⚠️ Failed to download media. Please try again.` — VPN blip during Telegram media fetch (`TypeError: fetch failed`). openclaw has no retry. Workaround: resend the file.
 - `messages.N.content.1: thinking blocks cannot be modified` — session history pipeline modifies thinking block signatures. Occurs in long-running kuzya sessions with extended thinking in history. Fix: reset the affected session.
+- `Telegram: not configured` in doctor — set `channels.telegram.defaultAccount: "kuzya"` (health check picks `default` account which has no token).
+- Bot stops responding after openclaw update — check `bindings` in `~/.openclaw/openclaw.json`. Since 2026.3.x: named accounts (not `"default"`) without explicit binding fail closed (`bot-message-context.ts:214`). Fix: add `{ "agentId": "kuzya", "match": { "channel": "telegram", "accountId": "kuzya" } }` to bindings.
+- Debug logging (for silent message drops): create `~/.config/systemd/user/openclaw-gateway.service.d/debug.conf` with `[Service]\nEnvironment=OPENCLAW_LOG_LEVEL=debug`, restart gateway. Full log: `/tmp/openclaw/openclaw-YYYY-MM-DD.log`.
 
 ### Resending a Stuck Message
 
