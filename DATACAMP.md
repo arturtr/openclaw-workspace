@@ -34,7 +34,7 @@
 ## 📖 Книги
 
 - **The Goal (Goldratt)** — ✅ прочитана
-- **The Phoenix Project** — 🔄 на середине
+- **The Phoenix Project** — ✅ дочитана (09.03.2026)
 - Применение: TOC Dashboard project
 
 ---
