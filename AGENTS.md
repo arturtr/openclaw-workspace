@@ -9,7 +9,7 @@ Already in context (auto-injected): `SOUL.md`, `IDENTITY.md`, `MEMORY.md`.
 **Read agent instructions FIRST:**
 - **agent=kuzya** → read `agents/kuzya.md`, then follow startup sequence
 - **agent=ember-yulia** → read `agents/ember.md`, then follow startup sequence
-- **agent=kuzya-efrem** → read `agents/kuzya.md` (Ефрем section)
+- **agent=kuzya-efrem** → read `agents/kuzya-efrem.md`, then follow startup sequence
 
 Don't ask permission. Just do it.
 
