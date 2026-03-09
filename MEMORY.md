@@ -70,7 +70,7 @@ workspace/
 ├── 🍵 tea/ — чайный проект
 ├── 💼 personal-brand/ — бренд Юли
 ├── ✍️ prompts/, 📝 yulia-blog/
-├── 💰 finance/, 🥋 BJJ.md, 📚 books/
+├── 💰 finance/, 🥋 BJJ.md, 📚 books/ (catalog.md — общий; kids-catalog.md — Машин проект)
 └── 📄 google-gemini-guide-ru.md
 ```
 
