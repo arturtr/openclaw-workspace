@@ -47,7 +47,8 @@
 - **Лепка из пластилина** — что нравится
 - **Комиксы Соника** — только начал читать
 - Любимый персонаж: Silver 🦔 (Nine — вдохновение для Juzi, но НЕ любимый)
-- Игры: Zooba, Subway Surfers, Укради Ежа, Sonic Speed Simulator (SSS)
+- Игры: Zooba, Subway Surfers, Укради Ежа, Sonic Speed Simulator (SSS), Suspects, Roblox
+- **Сериалы:** Murder Drones (один из любимых! Любимый персонаж — Cyn), Demon Slayer (любимый — Зеницу), Spy x Family
 - Любит лис 🦊
 - Играет в Zooba (любимые: пингвин Фази 🐧, мышь Луи, летучая мышь Генри, змея Айрис)
 
