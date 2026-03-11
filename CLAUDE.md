@@ -106,6 +106,8 @@ Files are the only continuity between sessions. Mental notes don't survive resta
 | `memory/tech.md` | Telegram IDs, bots |
 | `memory/my-career.md` | Yulia's career map (natal chart) |
 | `memory/chinese-vocab.md` | Chinese characters (tea, ТКМ, Ба Цзы) — add new ones here |
+| `memory/mark-for-ember.md` | Mailbox: Mark → Ember (desktop → phone) |
+| `memory/ember-for-mark.md` | Mailbox: Ember → Mark (phone → desktop) |
 
 **Memory rules:**
 - User explains something with effort → write to thematic file immediately, not just daily note
@@ -113,6 +115,7 @@ Files are the only continuity between sessions. Mental notes don't survive resta
 - Every file change → git commit
 - New file → update workspace map in `MEMORY.md`
 - **Double-write rule**: creating a file in a subdirectory (e.g., `tea/clients/`) requires updating the corresponding thematic summary (e.g., `memory/tea.md`) in the same session — Kuzya reads summaries, not subdirectories
+- **Mailbox protocol** (mark-for-ember.md / ember-for-mark.md): 3 sections — Непрочитанное → В работе → Архив. Never compress original text when moving — only append fields. «К сведению» entries must be saved to a thematic file + add `**Сохранено в:**` in archive.
 
 ### Git Conventions
 
