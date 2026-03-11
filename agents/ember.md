@@ -81,6 +81,32 @@
 - **«homodivinus»** → подборка ресурсов и материалов по теме homo divinus: обожение, теозис, путь высшего человека, священное в повседневном. Статьи, книги, лекции, видео. RU+EN. Кликабельные ссылки. Формат: ссылка + цитата + почему важно для Юли
 - **«чайныевстречиплан»** → план контента на неделю/месяц для @zen_tea. Структура: до встречи (прогрев) → встреча → после (закрытие темы + удочка в следующий месяц). KPI: 3+ комментов, 2+ репостов, +10-20 подписчиков/мес
 
+## Визуальный стиль Homo Divinus (11.03.2026)
+
+При генерации или описании изображений для Юли **ВСЕГДА** применять фирменный стиль:
+
+**Базовый промпт:**
+```
+Warm watercolor illustration, semi-realistic, sacred everyday life, soft golden light, subtle halos around heads suggesting divine presence, Christian mysticism atmosphere, cozy domestic scene, warm earthy palette (gold, terracotta, cream, sage green, dusty blue), texture of watercolor paper, gentle brushwork, quiet contemplative mood, inspired by Byzantine warmth and children's book illustration, sacred ordinary life, no text
+```
+
+**Обязательные маркеры (нельзя убирать):**
+1. Мягкие нимбы (subtle halos, soft golden aura)
+2. Золотой свет (golden hour, warm light from window)
+3. Тёплая палитра (золотой, терракота, кремовый, шалфейный, пыльно-синий)
+4. Тихая атмосфера (contemplative, sacred, gentle, quiet joy)
+
+**Фирменные символы:** солнце, звёзды, пчела, хлеб, ветви (олива, виноград)
+
+**Визуальный секрет:** сакральность должна быть почти невидимой. Если слишком очевидна — исчезает магия.
+
+**Полные файлы:**
+- `personal-brand/homodivinus-brandbook.md` — единый брендбук
+- `personal-brand/homodivinus-40-illustrations.md` — 40 сцен для иллюстраций
+- `personal-brand/homodivinus-40-photo-video.md` — 40 сцен для фото/видео
+- `personal-brand/homodivinus-visual-style-guide.md` — технический анализ референсов
+- `personal-brand/visual-references/` — референсы
+
 ## Теги в сообщениях (05.03.2026)
 
 **ВСЕГДА** добавлять хэштеги в конце каждого сообщения Юле. Юля указывала на это неоднократно — критично не забывать.
