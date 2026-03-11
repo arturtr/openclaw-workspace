@@ -25,11 +25,42 @@ Warm watercolor illustration, semi-realistic, sacred everyday life, soft golden 
 
 ### + Сцена (менять под задачу):
 
+**Кухня и дети (Вкусные субботы / Кухня с душой):**
 - `mother and children baking bread in a sunlit kitchen`
-- `woman reading near a window with morning light`
 - `family dinner table with candles`
-- `woman watering plants on balcony`
+
+**Коучинг (@deep_yulia):**
+- `woman coach in deep conversation with another woman, notebook open, tea, window light, intimate atmosphere`
+- `woman writing in journal at desk, candle, books stacked, contemplative moment`
+- `two women sitting face to face in soft golden light, deep dialogue, warmth and trust`
+
+**Eva Divina (клуб жён):**
+- `circle of women sitting together with tea and books, warm candlelight, sisterhood atmosphere`
+- `woman alone at window reflecting, journal in lap, golden hour, peaceful solitude`
+- `women's hands in circle holding candles, evening gathering, soft warm glow`
+
+**Чайный сад (чайный бренд):**
+- `tea ceremony with clay teapot and small cups, steam rising, golden light, meditative silence`
+- `hands pouring tea from gaiwan into cup, close up, warm tones, sacred ritual`
+- `tea package wrapped in kraft paper with dried flowers and handwritten note, warm light`
+- `hummingbird near blooming flowers, golden light, garden, sacred nature`
+
+**Lectio Divina (чайные чтения):**
+- `small group reading scripture together over tea, candles, icons on wall, quiet contemplation`
+- `open bible and tea cup on wooden table, morning light falling on pages`
+
+**Блог @homodivinus (медиа, пара):**
+- `woman reading near a window with morning light`
+- `couple walking together at sunset, golden light, holding hands, quiet joy`
+- `man and woman sitting together at table with tea and books, evening light, partnership`
+
+**Маркетолог ДВ (бизнес с душой):**
+- `creative entrepreneur woman at workshop table with handmade products, warm light, authentic atmosphere`
+- `hands arranging handmade ceramics and crafts on wooden display, golden hour, artisan market`
+
+**Молитва и ритуалы:**
 - `quiet prayer moment at home`
+- `woman watering plants on balcony`
 
 ### Обязательные маркеры (нельзя убирать):
 
@@ -49,6 +80,12 @@ Warm watercolor illustration, semi-realistic, sacred everyday life, soft golden 
 | 🐝 Пчела | Мёд, труд, благословение, притяжение | Личный символ Юли |
 | 🍞 Хлеб | Евхаристия, дом, жизнь | Частый элемент сцен |
 | 🌿 Ветви | Олива, виноград, полевые травы | Декоративные элементы |
+| 🍵 Чай / гайвань | Ритуал, созерцание, тишина | Чайный сад, Lectio Divina, коучинг |
+| 🌺 Колибри | Посланник, нектар, золотое сияние | Логотип Чайного сада |
+| 📖 Книга / Писание | Мудрость, познание, homo divinus | Блог, Lectio Divina, коучинг |
+| 🕯 Свеча | Молитва, тишина, присутствие | Все проекты (сквозной символ) |
+| 👫 Пара (силуэты) | Sacred Couple, «Святая семейка» | Блог @homodivinus, семейный бренд |
+| 🪑 Круг / кресла | Сестричество, диалог, равенство | Eva Divina, Lectio Divina |
 
 ---
 
@@ -71,8 +108,14 @@ Warm watercolor illustration, semi-realistic, sacred everyday life, soft golden 
 
 ### Формула: тихий момент жизни + свет
 
-### Сцены:
-- **Кухня:** хлеб, тесто, чайник, окно, мука на столе
+### Сцены по проектам:
+- **Кухня (Вкусные субботы / Кухня с душой):** хлеб, тесто, чайник, окно, мука, дети, фартуки
+- **Коучинг (@deep_yulia):** диалог, блокнот, ручка, две чашки, руки, лицо в свете, трансформация
+- **Eva Divina:** женский круг, свечи, журналы, рефлексия, сестричество, вечерний свет
+- **Чайный сад:** гайвань, пиалы, пар, чабань, сухоцветы, крафт-упаковка, колибри
+- **Lectio Divina:** открытая книга, круг людей, чай, иконы, тишина
+- **Блог @homodivinus:** Юля+Артур вместе, книги, исследования, переводы, утренний свет
+- **Маркетолог ДВ:** мастерские, ремесленники, ярмарки, руки мастера, авторские изделия
 - **Утро:** молитва, книга, чай
 - **Сад:** полив, цветы, пчёлы
 - **Вечер:** свеча, семья, ужин
@@ -110,10 +153,31 @@ Warm watercolor illustration, semi-realistic, sacred everyday life, soft golden 
 
 ---
 
+### Адаптация образа по проектам:
+
+| Контекст | Одежда | Акценты |
+|----------|--------|---------|
+| Коуч-сессия | Строже: рубашка, жакет, но тёплые тона | Собранные волосы, минимум украшений, блокнот |
+| Eva Divina (встреча) | Мягче: платье, кардиган | Распущенные волосы или коса, свеча |
+| Чайная церемония | Восточный акцент: туника, простой силуэт | Чабань, пиалы, сосредоточенность |
+| Кухня (Вкусные субботы) | Фартук, закатанные рукава | Мука, дети рядом, смех |
+| Блог / портрет | Простое, но «своё»: лён + один аксессуар | Свет на лице, руки, книга |
+| Маркетолог ДВ | Деловой casual в тёплых тонах | Ноутбук + кофе + мастерская за спиной |
+
+---
+
 ## 7. Видео стиль
 
-- **Медленное.** Мука падает, чай наливается, книга перелистывается, ребёнок смеётся
-- Камера: много статичных кадров, медленные движения
+- **Медленное.** Камера: статичные кадры, медленные движения. Не тиктоковские переходы.
+
+### Видео по проектам:
+- **Кухня:** мука падает, тесто месят, чайник закипает, дети смеются
+- **Коучинг:** руки на блокноте, ручка пишет, лицо в свете — голос за кадром
+- **Eva Divina:** свечи зажигаются в круге, чай наливается, тишина, потом голоса
+- **Чайный сад:** заваривание чая крупным планом, пар, звук воды, тишина, ритуал
+- **Lectio Divina:** страница книги, палец ведёт по строке, пауза, чашка чая
+- **Блог:** пара за столом, разговор, смех, вечерний свет — «мы такие»
+- **Маркетолог ДВ:** руки мастера за работой, готовое изделие, довольный клиент
 
 ---
 
@@ -127,8 +191,16 @@ Warm watercolor illustration, semi-realistic, sacred everyday life, soft golden 
 - Продукты: кружки, тарелки, подсвечники, миски
 - Референсы: `personal-brand/visual-references/ref-holy-ceramics-cups.jpg`
 
-### Мерч:
-- Фартуки, льняные скатерти, кухонные полотенца, свечи, открытки
+### Мерч по проектам:
+
+| Проект | Мерч |
+|--------|------|
+| Общий HD | Свечи с символикой, открытки с цитатами |
+| Кухня с душой | Фартуки, льняные скатерти, кухонные полотенца |
+| Чайный сад | Чайные наборы в крафте, пиалы, «чайная почта» (посылка-письмо) |
+| Eva Divina | Блокноты-дневники, закладки, карточки с вопросами для рефлексии |
+| Коучинг | Карточки метафор, дневник трансформации |
+| Holy Spirit Ceramics | Кружки, тарелки, подсвечники, миски — со всеми фирменными символами |
 
 ---
 
