@@ -136,7 +136,7 @@ Requires `python-docx`. Use `uv run --with python-docx python3 script.py` if not
 
 ### Safety Rules
 
-- `trash` over `rm`
+- `trash` over `rm` (`trash` not installed — use `gio trash`)
 - Ask before: emails, public posts, anything leaving the machine
 - Read freely: files, web, workspace exploration
 - Never share private data from this workspace externally
@@ -163,6 +163,8 @@ Edit config safely: use `Edit` tool for targeted changes; use `python3 json.load
 **Current models (as of 2026.2.25):** opus-4-6 (primary), sonnet-4-6 (fallback#1), haiku-4-5 (fallback#2). kuzya-efrem and kuzya-masha have per-agent model overrides in `agents.list` — update those separately when upgrading models.
 
 Update openclaw: `openclaw update` (run from any directory)
+
+**If update fails mid-install** (CLI crashes with `ERR_MODULE_NOT_FOUND`): VPN blocks npm registry. Disconnect VPN, run `cd /home/artur/projects/openclaw && pnpm install && pnpm build`, reconnect VPN. Then `openclaw doctor` to fix systemd entrypoint if changed.
 
 Check active models: `openclaw models list`
 
