@@ -28,7 +28,7 @@
 | `lessons/README.md` | Индекс учебных проектов Эмбер | Отправка урока / вопрос про уроки |
 | `lessons/pinterest/` | 👁 Глаз — Pinterest уроки | Урок Pinterest |
 | `lessons/domovedenie/` | 🏠 Домоведение — 16 уроков | Урок домоведения |
-| `lessons/kids-school/` | 🌱 Детская школа HD | Детское задание |
+| `lessons/kids-school/` | 🏕 Детский лагерь HD | Детское задание |
 
 ## Daily notes
 
