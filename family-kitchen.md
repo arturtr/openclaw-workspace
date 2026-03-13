@@ -75,6 +75,12 @@
   - Рецепт: [Вкусотеррия — тёплый салат с печенью и лесными ягодами](https://vkusoterria.ru/o-nas/recepti/%C2%AB%E2%80%8Eteplyij-salat-iz-kurinoj-pecheni-s-lesnyimi-yagodami-i-brusnichnyim-sousom%C2%BB%E2%80%8E)
   - Рецепт: [iamcook.ru — салаты с куриной печенью](https://www.iamcook.ru/theme/chicken-liver-salads)
 
+### Любимые блюда Артура 🍜
+- **Рамен с говядиной** — насыщенный тёмный бульон (соевый соус), пшеничная лапша, тонкие слайсы говядины, ростки сои, зелёный лук, нори, грибы шиитаке, яйцо. Подаётся в крапчатой керамической миске.
+  - Рецепт: [food.ru — рамен с говядиной (пошагово)](https://food.ru/recipes/56239-ramen-s-govjadinoi)
+  - Рецепт: [Яндекс Еда — рамен и согревающие супы](https://openkitchen.eda.yandex/article/dishes/recipes/ramen-karri-laksa-tri-sogrevayuschikh-retsepta-chtoby-perezhit-posledniy-mesyats-zimy)
+  - Рецепт: [ilsoma.ru — рамен с говядиной и хондаши](https://ilsoma.ru/supy/ramen/)
+
 ---
 
 ## 🌱 Хотим расширить
