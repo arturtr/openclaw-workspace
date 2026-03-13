@@ -191,7 +191,9 @@ git log --oneline v2026.X.XX..v2026.Y.YY   # commits between versions
 - `All models failed: rate_limit` in cron runs — Anthropic rate limit cascade. All three fallbacks (opus/sonnet/haiku) share one account and all enter cooldown together. Concurrent cron tasks at 20:00/21:00 can trigger this.
   Cooldown: 1m → 5m → 25m → 60m (exponential). State: `~/.openclaw/agents/kuzya/auth-profiles.json`. To clear: delete `usageStats` fields or use `openclaw models status`. Since 2026.2.25: same-provider fallbacks are tried despite cooldown when reason=rate_limit.
 - `cron announce delivery failed` — gateway couldn't send the job completion notification. Check `delivery-queue/` for stuck entries.
-- `sendMessage failed` repeated — check VPN: `ip route | grep tun0`. If tun0 has metric 50, it routes all traffic. Unstable VPN = Telegram down.
+- `cron: job execution timed out` — complex cron tasks (file reads + memory search + LLM generation + delivery) need 600s+ timeout. Embeddings rate limiting with exponential backoff consumes 20-30s alone. Fix: `openclaw cron edit <id> --timeout-seconds 600`.
+- `sendMessage failed` repeated — check VPN: `ip route | grep tun0`. If tun0 has metric 50, it routes all traffic. Unstable VPN = Telegram down. US VPN servers cause timeouts — switch to Stockholm (EU). Suggest this when VPN issues detected.
+- `LLM request timed out` — same VPN issue affects Anthropic API calls from gateway. Cron jobs and regular sessions both fail. Switch to Stockholm VPN server.
 - `⚠️ Failed to download media. Please try again.` — VPN blip during Telegram media fetch (`TypeError: fetch failed`). openclaw has no retry. Workaround: resend the file.
 - `messages.N.content.1: thinking blocks cannot be modified` — session history pipeline modifies thinking block signatures. Occurs in long-running kuzya sessions with extended thinking in history. Fix: reset the affected session.
 - `Telegram: not configured` in doctor — set `channels.telegram.defaultAccount: "kuzya"` (health check picks `default` account which has no token).
