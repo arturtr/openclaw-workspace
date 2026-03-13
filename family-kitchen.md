@@ -69,6 +69,12 @@
 ### Простые любимые
 - Творог со сметаной и джемом
 
+### Любимые блюда Юли 💛
+- **Тёплый салат с куриной печенью и брусникой** — микс салат (руккола, шпинат, латук), черри, обжаренная куриная печень, брусника/брусничный соус. Подаётся в красивой керамической миске.
+  - Рецепт: [Gastronom.ru — салат из печёнки с брусникой и мятой](https://www.gastronom.ru/text/10-salatov-s-kurinoj-pechenyu-kotorye-udivyat-svoim-vkusom-1027524)
+  - Рецепт: [Вкусотеррия — тёплый салат с печенью и лесными ягодами](https://vkusoterria.ru/o-nas/recepti/%C2%AB%E2%80%8Eteplyij-salat-iz-kurinoj-pecheni-s-lesnyimi-yagodami-i-brusnichnyim-sousom%C2%BB%E2%80%8E)
+  - Рецепт: [iamcook.ru — салаты с куриной печенью](https://www.iamcook.ru/theme/chicken-liver-salads)
+
 ---
 
 ## 🌱 Хотим расширить
