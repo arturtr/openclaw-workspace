@@ -33,16 +33,19 @@ parentOrder задаёт порядок (100, 200, 300...). done: true/false.
 
 ### Заметки в задачах (Delta / Quill формат)
 Заметки — **Delta JSON-строка** (Quill rich text), не plain markdown!
+**⚠️ Использовать ТОЛЬКО эндпоинт `/v2/note/`, НЕ поле `note` в задаче!**
 ```bash
-# Обновить заметку — note должен быть JSON-строкой с Delta-массивом
-scripts/singularity.sh raw PATCH /task/T-xxx \
-  '{"note":"[{\"attributes\":{\"bold\":true},\"insert\":\"Заголовок:\"},{\"insert\":\" текст\\n\"}]"}'
+# Обновить заметку через /note endpoint (ПРАВИЛЬНЫЙ способ)
+scripts/singularity.sh raw PATCH /note/N-T-xxx \
+  '{"content":"[{\"attributes\":{\"bold\":true},\"insert\":\"Заголовок:\"},{\"insert\":\" текст\\n\"}]"}'
 
-# Или через /note endpoint
-scripts/singularity.sh raw PATCH /note/N-T-xxx '{"content":"[...]"}'
+# Прочитать заметку
+scripts/singularity.sh raw GET /note/N-T-xxx
 ```
-Атрибуты: `bold`, `italic`, `underline`, `link`, `blockquote`.
-Последний `insert` **обязан** заканчиваться на `\n`.
+- content = JSON-строка с массивом Delta ops
+- Атрибуты: `bold`, `italic`, `underline`, `link`, `blockquote`
+- Последний `insert` **обязан** заканчиваться на `\n`
+- Для сложных заметок лучше использовать python (экранирование)
 
 ### Два аккаунта (семейный)
 - **Артур:** токен в `~/.openclaw/secrets/singularity-api-token`
