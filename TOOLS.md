@@ -31,11 +31,18 @@ scripts/singularity.sh raw GET "/checklist-item?taskId=T-xxx"
 ```
 parentOrder задаёт порядок (100, 200, 300...). done: true/false.
 
-### Заметки в задачах
+### Заметки в задачах (Delta / Quill формат)
+Заметки — **Delta JSON-строка** (Quill rich text), не plain markdown!
 ```bash
-# Обновить заметку задачи (markdown)
-scripts/singularity.sh raw PATCH /task/T-xxx '{"note":"текст заметки"}'
+# Обновить заметку — note должен быть JSON-строкой с Delta-массивом
+scripts/singularity.sh raw PATCH /task/T-xxx \
+  '{"note":"[{\"attributes\":{\"bold\":true},\"insert\":\"Заголовок:\"},{\"insert\":\" текст\\n\"}]"}'
+
+# Или через /note endpoint
+scripts/singularity.sh raw PATCH /note/N-T-xxx '{"content":"[...]"}'
 ```
+Атрибуты: `bold`, `italic`, `underline`, `link`, `blockquote`.
+Последний `insert` **обязан** заканчиваться на `\n`.
 
 ### Два аккаунта (семейный)
 - **Артур:** токен в `~/.openclaw/secrets/singularity-api-token`
@@ -48,7 +55,9 @@ scripts/singularity.sh raw PATCH /task/T-xxx '{"note":"текст заметки
 - ❌ Нет webhooks (только polling)
 - ❌ Повторяющиеся задачи через API не создать
 - ❌ Shared-проекты через API не видны
-- Priority: 0 = нет, 1 = низкий, 2 = средний (3 невалидно!)
+- Priority: **0 = high, 1 = normal, 2 = low** (НЕ наоборот!)
+- Checked: 0 = пусто, 1 = выполнена, 2 = отменена
+- Подробная справка: `scripts/singularity-api.md`
 
 ### Проекты (обновлено 15.03.2026)
 - 🏠 Наш дом | 💼 Работа | 💻 Jiffy | 🍵 Чай
