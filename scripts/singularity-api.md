@@ -30,6 +30,8 @@ curl -s -X GET "https://api.singularity-app.com/v2/project" \
 | DELETE | /v2/task/{id} | Удалить задачу |
 | GET | /v2/tag | Список тегов |
 | POST | /v2/tag | Создать тег |
+| GET | /v2/note/{noteId} | Получить заметку (Delta content) |
+| PATCH | /v2/note/{noteId} | Обновить заметку (Delta content) |
 | GET | /v2/habit | Список привычек |
 | POST | /v2/habit | Создать привычку |
 
@@ -42,7 +44,7 @@ curl -s -X GET "https://api.singularity-app.com/v2/project" \
   "start": "2026-03-16T09:00:00+03:00",
   "priority": 1,
   "useTime": false,
-  "note": [{"insert": "Описание задачи\n"}]
+  "note": "[{\"attributes\":{\"bold\":true},\"insert\":\"Заголовок:\"},{\"insert\":\" описание\\n\"}]"
 }
 ```
 
@@ -70,7 +72,10 @@ curl -s -X GET "https://api.singularity-app.com/v2/project" \
 
 **Время:** UTC+10 (Хабаровск). `useTime: false` — только дата. `useTime: true` — реальное время.
 
-**Заметки (note):** Delta format — массив операций напрямую `[{},...]`, НЕ `{"ops":[...]}`. Последний `insert` обязан заканчиваться на `\n`.
+**Заметки (note):** строка. Два варианта:
+- **Plain text:** `"note": "простой текст"` — сохранится как есть.
+- **Delta (Quill):** `"note": json.dumps(delta_array)` — JSON-строка с Delta-массивом, приложение рендерит rich text. Атрибуты: `bold`, `italic`, `underline`, `link`, `blockquote`. Последний `insert` обязан заканчиваться на `\n`.
+- **Чтение/обновление:** `GET/PATCH /v2/note/N-{taskId}`, поле `content` — Delta JSON-строка.
 
 **Уведомления:**
 ```json
