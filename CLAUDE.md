@@ -185,6 +185,15 @@ git log --oneline v2026.X.XX..v2026.Y.YY   # commits between versions
 | Cron run results | `~/.openclaw/cron/runs/*.jsonl` |
 | Stuck outbound messages | `~/.openclaw/delivery-queue/` |
 | Cron job definitions | `~/.openclaw/cron/jobs.json` |
+| Archived sessions | `~/.openclaw/agents/*/sessions/_archive/` — doctor moves orphan transcripts here |
+
+**Cron CLI cheat sheet:**
+- `openclaw cron add --message <text>` (not `--prompt`), `--model <model>` for per-job override
+- `openclaw cron edit <id> --message/--model/--timeout-seconds/--cron`
+- `openclaw cron run <id>` — manual test run; returns `already-running` if in progress
+- `openclaw cron runs --id <id>` — run history for specific job
+- Prompts stored in `payload.message` inside jobs.json, not top-level field
+- Empty message → agent gets job name only, improvises from agent instructions (kuzya.md/ember.md)
 
 **Common failures:**
 - `sendMessage failed: Network request failed` — transient Telegram API blip. Message was generated but not delivered. Check latest session `.jsonl`, extract assistant response, resend via Telegram Bot API.
