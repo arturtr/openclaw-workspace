@@ -265,6 +265,8 @@ Uses Groq (`whisper-large-v3-turbo`) via `GROQ_API_KEY`. Auto-detected — no co
 - Checked: 0=empty, 1=done, 2=cancelled. State is pin (0/1), NOT completion
 - Shared projects: API returns only owned projects. Shared → use owner's token
 - MCP `listTasks` with `projectId` filter may return empty despite tasks existing (known bug)
+- MCP `createTask` with `projectId` fails intermittently → workaround: create without project, then `updateTask` to set projectId
+- OpenAPI spec (full field schemas): `https://api.singularity-app.com/v2/api-json` (Swagger UI at `/v2/api` needs JS, useless for WebFetch)
 - Full field reference: `scripts/singularity-api.md`
 
 ### Finance & Contracts
