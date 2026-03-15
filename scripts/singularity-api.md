@@ -68,7 +68,7 @@ curl -s -X GET "https://api.singularity-app.com/v2/project" \
 
 **Complete:** число (вероятно 0-100), прогресс-бар.
 
-**Время:** GMT+3. `useTime: false` — только дата. `useTime: true` — реальное время.
+**Время:** UTC+10 (Хабаровск). `useTime: false` — только дата. `useTime: true` — реальное время.
 
 **Заметки (note):** Delta format — массив операций напрямую `[{},...]`, НЕ `{"ops":[...]}`. Последний `insert` обязан заканчиваться на `\n`.
 
