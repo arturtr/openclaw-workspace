@@ -246,6 +246,16 @@ Uses Groq (`whisper-large-v3-turbo`) via `GROQ_API_KEY`. Auto-detected — no co
 | `KANBAN.md` | Active project board |
 | `HEARTBEAT.md` | Cron tasks / scheduled reminders |
 
+### Singularity App (task manager)
+
+**MCP серверы (Claude Code):** `singularity` (Артур) и `singularity-yulia` (Юля) в `~/.claude.json`.
+
+**Агенты (Kuzya/Ember):** используют curl к REST API. Справочник: `scripts/singularity-api.md`.
+
+**Токены:**
+- Артур: `~/.openclaw/secrets/singularity-api-token`
+- Юля: `~/.openclaw/secrets/singularity-yulia-api-token`
+
 ### Finance & Contracts
 
 `finance/mellow/` — Mellow (FRWD Limited, HK) subcontractor relationship.

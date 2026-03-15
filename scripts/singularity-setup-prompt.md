@@ -112,9 +112,19 @@ POST /v2/tag для каждого:
 
 ---
 
-## Запуск
+## Статус интеграции (15.03.2026)
+
+**MCP серверы (Claude Code):** `singularity` (Артур) и `singularity-yulia` (Юля) — настроены в `~/.claude.json`. Работают через stdio, токены зашиты в аргументы запуска.
+
+**Агенты openclaw (Kuzya/Ember):** используют curl к REST API. Инструкции в `agents/kuzya.md` и `agents/ember.md`. API-справочник: `scripts/singularity-api.md`.
+
+**MCP сервер:** `~/.openclaw/tools/singularity-mcp-server/` (v2.1.1)
+
+---
+
+## Запуск первичной настройки
 
 В Claude Code:
 ```
-Прочитай файл scripts/singularity-setup-prompt.md и выполни инструкции.
+Прочитай файл scripts/singularity-setup-prompt.md и выполни промпт из раздела "Промпт для агента".
 ```

@@ -87,4 +87,4 @@ curl -s -X GET "https://api.singularity-app.com/v2/project" \
 ## Два аккаунта (в будущем)
 
 - **Артур:** токен в `~/.openclaw/secrets/singularity-api-token`
-- **Юля:** токен в `~/.openclaw/secrets/singularity-yulia-api-token` (пока не создан)
+- **Юля:** токен в `~/.openclaw/secrets/singularity-yulia-api-token`
