@@ -194,6 +194,9 @@ git log --oneline v2026.X.XX..v2026.Y.YY   # commits between versions
 - `openclaw cron runs --id <id>` — run history for specific job
 - Prompts stored in `payload.message` inside jobs.json, not top-level field
 - Empty message → agent gets job name only, improvises from agent instructions (kuzya.md/ember.md)
+- **Announce delivery**: `mode: announce` sends agent's LAST text output to channel. Prompts must do file ops first, then output content as final response. Never output summary after content. Prompt pattern: "ВАЖНО: Твой последний текстовый вывод будет автоматически доставлен. НЕ пытайся отправить через message/send."
+- **CLI output parsing**: `openclaw cron edit/list/run` outputs doctor warnings before JSON. Use `tail -3` or `grep -E '^{'` to extract JSON, not raw `json.load(sys.stdin)`.
+- **Run log `Delivered: False`**: announce delivery happens asynchronously after run log write. Check `journalctl --user -u openclaw-gateway` for actual `sendMessage ok` confirmation.
 
 **Common failures:**
 - `sendMessage failed: Network request failed` — transient Telegram API blip. Message was generated but not delivered. Check latest session `.jsonl`, extract assistant response, resend via Telegram Bot API.
