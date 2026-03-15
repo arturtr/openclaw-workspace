@@ -60,7 +60,7 @@ curl -s -X GET "https://api.singularity-app.com/v2/project" \
 
 **Emoji:** hex codepoint без префикса → `"1f49e"` (не `"U+1F49E"`, не `"💞"`)
 
-**Priority:** 0 = нет, 1 = низкий (по умолчанию), 2 = средний, 3 = высокий
+**Priority:** 0 = высокий, 1 = обычный (по умолчанию), 2 = низкий. Значение 3+ вызывает 400.
 
 **Время:** GMT+3. `useTime: false` — только дата. `useTime: true` — реальное время.
 
@@ -84,7 +84,14 @@ curl -s -X GET "https://api.singularity-app.com/v2/project" \
 
 **Rate limit:** пауза 0.5 сек между запросами.
 
-## Два аккаунта (в будущем)
+## Два аккаунта
 
 - **Артур:** токен в `~/.openclaw/secrets/singularity-api-token`
 - **Юля:** токен в `~/.openclaw/secrets/singularity-yulia-api-token`
+- Общие проекты (Чай, ИИ-агентство, Наш дом) расшарены через UI → API доступ только через токен владельца (Артур)
+
+## Swagger
+
+Интерактивная документация: `https://api.singularity-app.com/v2/api` (требует токен)
+
+Официальная wiki: `https://singularity-app.ru/wiki/api/`
