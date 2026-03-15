@@ -259,6 +259,14 @@ Uses Groq (`whisper-large-v3-turbo`) via `GROQ_API_KEY`. Auto-detected — no co
 - Артур: `~/.openclaw/secrets/singularity-api-token`
 - Юля: `~/.openclaw/secrets/singularity-yulia-api-token`
 
+**API gotchas:**
+- Emoji: only single-codepoint hex (`"1f375"`). ZWJ sequences, flags, variation selectors → 400
+- Priority: 0=high, 1=normal, 2=low. Values 3+ → 400
+- Checked: 0=empty, 1=done, 2=cancelled. State is pin (0/1), NOT completion
+- Shared projects: API returns only owned projects. Shared → use owner's token
+- MCP `listTasks` with `projectId` filter may return empty despite tasks existing (known bug)
+- Full field reference: `scripts/singularity-api.md`
+
 ### Finance & Contracts
 
 `finance/mellow/` — Mellow (FRWD Limited, HK) subcontractor relationship.
