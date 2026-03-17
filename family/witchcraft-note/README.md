@@ -201,7 +201,11 @@
 
 ## Платформа
 
-- Прототип возможно в **Telegram** — text-based / interactive fiction
+- **🔗 Играть:** https://arturtr.github.io/the-real-one-play/
+- **GitHub:** https://github.com/arturtr/the-real-one-play (?) — уточнить название репо
+- Прототип на **Twine** (Harlowe), опубликован на GitHub Pages
+- Три стиля оформления
+- Прототип возможно в **Telegram** — text-based / interactive fiction (альтернатива)
 - Референсы Telegram-игр: Тонархия (→ Astea), Neuromonks — оба классно начали, но не взлетели
 - Плюсы: низкий порог входа, не нужен разработчик мобилки, можно быстро протестировать
 - AI может генерировать сцены в реальном времени (как семейный квест с Кузей)
