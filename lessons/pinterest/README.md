@@ -19,7 +19,7 @@
 | 10 | Аналитика Pinterest | ✅ |
 | 11 | Pinterest + Дзен: воронка | ✅ |
 | 12 | Pinterest + Instagram: кросс-постинг | ✅ |
-| 13 | Video Pins | ⬜ |
+| 13 | Video Pins | ✅ |
 | 14 | Idea Pins (мини-истории) | ⬜ |
 | 15 | Сезонный контент | ⬜ |
 | 16 | Автоматизация и Tailwind | ⬜ |
