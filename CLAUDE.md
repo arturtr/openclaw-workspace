@@ -145,6 +145,24 @@ Requires `python-docx`. Use `uv run --with python-docx python3 script.py` if not
 
 ## Operations & Debugging
 
+### Telegram Channel Posts (channel_post routing)
+
+- `channel_post` arrives with `requireConfiguredGroup: true` — without a `groups` entry in the account config, posts are silently dropped (`bot-handlers.ts:1552`)
+- Channel IDs (negative, e.g. `-100XXXXXXXXXX`) CANNOT go in `allowFrom` — validator rejects them. Use `groups` config with `enabled: true` instead; `chatExplicitlyAllowed` logic (`group-access.ts:187`) bypasses sender check when group has explicit config and no `groupAllowFrom`
+- Per-group `systemPrompt` field injects as "## Group Chat Context" in system prompt — use it to override Silent Replies (NO_REPLY) behavior for specific groups
+- To redirect group responses to a different chat: use `message` tool (action=send, to=chatId) in agent instructions, since openclaw has no built-in response redirect
+
+### Tool Profiles & Policies
+
+- Tool profiles: `minimal`, `coding`, `messaging`, `full`. The `message` tool is in `messaging` only, NOT `coding` (`tool-catalog.ts:189-193`)
+- `tools.alsoAllow: ["message"]` in global config adds tool to coding profile without breaking it. Per-group `tools.allow` is a **restrictive** allowlist (removes all other tools); use `tools.alsoAllow` to add tools additively
+- Current config: `tools.alsoAllow: ["message"]` — enables message/send tool for all sessions including group
+
+### Session Management
+
+- Reset a session: rename `{id}.jsonl` → `{id}.jsonl.reset.{timestamp}` — gateway creates fresh session on next message
+- Stale NO_REPLY in session history influences future responses — reset session after changing agent instructions
+
 ### Config & Secrets
 
 `~/.openclaw/openclaw.json` — Zod-validated, `.strict()`. Auth profiles only allow `provider`, `mode`, `email`. **No token fields.**
