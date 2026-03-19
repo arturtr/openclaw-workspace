@@ -68,6 +68,8 @@ curl -s -X GET "https://api.singularity-app.com/v2/project" \
 
 **Checked (завершение):** 0 = пусто, 1 = выполнена, 2 = отменена.
 
+**Deferred (Когда-нибудь):** `"deferred": true` — задача попадает в раздел «Когда-нибудь». Без даты. Для возврата: `"deferred": false`.
+
 **Complete:** число (вероятно 0-100), прогресс-бар.
 
 **Время:** UTC+10 (Хабаровск). `useTime: false` — только дата. `useTime: true` — реальное время.
