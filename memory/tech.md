@@ -24,6 +24,17 @@
 - Имя: Марк (евангелист, лев)
 - Пара: Ember 🔥 (телефон) + Mark 🦁 (десктоп) — уголёк и лев
 
+## Соцсети Юли (обновлено 20.03.2026)
+- **Telegram личный:** @deep_yulia (id: 364539550)
+- **Telegram канал:** @homodivinus (homo divinus daily • человек божественный)
+- **ВК личный профиль:** https://vk.ru/deep.yulia
+- **ВК канал/сообщество:** https://vk.ru/homodivinus
+- **Threads:** @deep.yulia (ранее @chill_yulia — обновлено 20.03.2026)
+- **Сайт:** homodivinus.ru (WordPress)
+- **Дзен:** https://dzen.ru/homodivinus
+- **Pinterest:** (не настроен)
+- **TenChat:** (не начато)
+
 ## Прочее
 - faster-whisper настроен (`~/.openclaw/tools/bin/python`)
 - HTTP-ошибки видны детям — смирились, живём
