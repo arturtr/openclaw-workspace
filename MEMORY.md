@@ -77,6 +77,10 @@ workspace/
 ├── 🔮 yulia-natal.md + yulia-natal-card.pdf
 ├── 📋 KANBAN.md, GIFTS.md, DATACAMP.md, YULIA_RESOURCES.md
 ├── 🏠 family/ — семейные проекты
+│   ├── housing/README.md — навигация по жилищным проектам
+│   ├── housing/ (корень) — поиск нового жилья (критерии, листинги, usability-spec)
+│   ├── housing/sale-fabrichniy-3/ — продажа квартиры Артура+Карины (сделка в процессе)
+│   └── housing/yulia-property/ — раздел имущества Юли и Алексея
 ├── 🍵 tea/ — чайный проект
 ├── 💼 personal-brand/ — бренд Юли
 ├── ✍️ prompts/, 📝 yulia-blog/
