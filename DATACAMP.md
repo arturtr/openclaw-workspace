@@ -1,41 +1,61 @@
-# 📚 DataCamp & BABOK — Прогресс Артура
+# 📚 DataCamp — Карта курсов Артура
 
 **Подписка:** активна
-**План:** ops-analyst-ba-path.md
-**Трекинг:** обновлять по ходу, спрашивать в утренней сводке
-
-## Текущий курс
-
-**Supply Chain Analytics in Python** (4ч)
-- Ссылка: https://www.datacamp.com/courses/supply-chain-analytics-in-python
-- Статус: 🔄 в процессе
-- Прогресс: 1/4 главы
-
-## Очередь
-
-| Месяц | Курс | Часы | Статус |
-|-------|------|------|--------|
-| 1-2 | Supply Chain Analytics in Python | 4 | ⏳ |
-| 1-2 | Introduction to Statistics | 4 | ⏳ |
-| 3-4 | Intermediate SQL | 4 | ⏳ |
-| 3-4 | Data Visualization for Everyone | 2 | ⏳ |
-| 5-6 | Introduction to Financial Concepts in Python | 4 | ⏳ |
-| 5-6 | Introduction to Power BI | 4 | ⏳ |
-| 7-9 | Communicating Data Insights | 3 | ⏳ |
-| 7-9 | A/B Testing in Python | 4 | ⏳ |
-
-## BABOK v3
-
-- ✅ Ch 1-2 (What is BA + Core Concept Model)
-- ✅ Ch 6.0 (Strategy Analysis — обзор)
-- Следующий: Ch 6.1 (Analyze Current State)
-- Техники: 10.35 Process Modeling, 10.40 Root Cause Analysis, 10.28 Metrics/KPIs
-
-## 📖 Книги
-
-- **The Goal (Goldratt)** — ✅ прочитана
-- **The Phoenix Project** — ✅ дочитана (09.03.2026)
-- Применение: TOC Dashboard project
+**Фокус:** то, что релевантно Jiffy + философия данных + AI
+**Принцип:** не «пройти всё», а выбрать нужное и закончить
 
 ---
-*Обновлено: 2026-02-13*
+
+## ❌ Закрыто
+
+| Курс | Статус | Почему |
+|------|--------|--------|
+| Supply Chain Analytics in Python | ❌ брошен (1/4) | Не моя тема. Эксперимент показал что не туда |
+
+---
+
+## 🔴 Прямо сейчас (для Jiffy)
+
+| Курс | Часы | Зачем | Статус |
+|------|------|-------|--------|
+| **Introduction to dbt** | 4 | Уже используешь, закрепить фундамент. Ник просил строить гайды | ⬜ |
+| **Data Warehousing Concepts** | 2 | Архитектура хранилищ — твоя зона | ⬜ |
+| **Introduction to Snowflake** | 4 | Если у вас Snowflake или аналог | ⬜ уточнить |
+
+## 🟡 Для философии данных / бренда
+
+| Курс | Часы | Зачем | Статус |
+|------|------|-------|--------|
+| **Data Governance Concepts** | 2 | Дата-культура = governance. Язык для выступлений | ⬜ |
+| **Data Literacy Fundamentals** | 2 | Как объяснять данные не-аналитикам | ⬜ |
+| **Data Communication Concepts** | 2 | Истории через данные | ⬜ |
+
+## 🔵 AI (опережение)
+
+| Курс | Часы | Зачем | Статус |
+|------|------|-------|--------|
+| **AI Fundamentals** | 2 | Структурировать то что знаешь | ⬜ |
+| **Introduction to LLMs in Python** | 4 | Claude Code workflow формально | ⬜ |
+| **Developing AI Applications** | 4 | AI-агентство / OpenClaw | ⬜ |
+
+---
+
+## BABOK
+
+| Глава | Тема | Статус |
+|-------|------|--------|
+| Ch 6.1 | Analyze Current State | ⬜ следующая |
+
+---
+
+## Привычка
+
+🟣 DataCamp 15 минут/день — в трекере Singularity
+
+## Рекомендация
+
+Начать с **dbt** (4 часа, прямая польза для Jiffy) или **Data Governance** (для бренда/философии).
+
+---
+
+*Обновлено: 25.03.2026. Ревью Артура — в процессе.*
