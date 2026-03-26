@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Work+Sans:wght@400;500;600&amp;family=Space_Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#b02500",
+              "on-secondary": "#ffefed",
+              "on-secondary-container": "#930410",
+              "on-error-container": "#520c00",
+              "on-surface": "#2e2f2f",
+              "surface-bright": "#f8f6f5",
+              "tertiary-dim": "#0c5d00",
+              "inverse-surface": "#0e0e0e",
+              "error-container": "#f95630",
+              "surface-container-low": "#f2f0f0",
+              "surface-variant": "#dedcdc",
+              "primary-fixed": "#ff7b04",
+              "inverse-on-surface": "#9e9d9c",
+              "secondary-fixed-dim": "#ffb0a7",
+              "on-primary-container": "#3d1800",
+              "tertiary-fixed": "#2ff801",
+              "inverse-primary": "#ff7b04",
+              "primary-fixed-dim": "#eb7000",
+              "surface-container-high": "#e4e2e2",
+              "on-surface-variant": "#5c5b5b",
+              "secondary": "#b12121",
+              "secondary-container": "#ffc3bd",
+              "on-error": "#ffefec",
+              "on-background": "#2e2f2f",
+              "surface": "#f8f6f5",
+              "on-tertiary-fixed-variant": "#0d6200",
+              "secondary-fixed": "#ffc3bd",
+              "secondary-dim": "#a01217",
+              "primary-container": "#ff7b04",
+              "on-tertiary-container": "#0b5800",
+              "tertiary-fixed-dim": "#2be800",
+              "on-tertiary-fixed": "#064200",
+              "on-secondary-fixed": "#700008",
+              "on-primary-fixed-variant": "#4c1f00",
+              "outline-variant": "#aeadac",
+              "error-dim": "#b92902",
+              "on-primary-fixed": "#000000",
+              "outline": "#777776",
+              "surface-container-highest": "#dedcdc",
+              "primary": "#954400",
+              "background": "#f8f6f5",
+              "surface-tint": "#954400",
+              "surface-dim": "#d5d4d4",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#e9e8e7",
+              "tertiary": "#0f6b00",
+              "primary-dim": "#823b00",
+              "on-secondary-fixed-variant": "#a11318",
+              "tertiary-container": "#2ff801",
+              "on-primary": "#fff0e9",
+              "on-tertiary": "#d3ffc1"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Work Sans"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .speed-blur {
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      }
+      .perspective-view {
+        perspective: 1000px;
+      }
+      .tilt-card {
+        transform: rotate(-1deg);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body overflow-hidden h-screen w-screen">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#f8f6f5] border-b-4 border-[#ff7b04] shadow-[0_4px_0_0_rgba(149,68,0,0.1)]">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center p-2 hover:skew-x-2 transition-transform active:scale-95 duration-75">
+<span class="material-symbols-outlined text-[#954400]" data-icon="settings">settings</span>
+</button>
+<h1 class="text-2xl font-black italic text-[#954400] drop-shadow-sm font-headline tracking-tighter uppercase">THE REAL ONE</h1>
+</div>
+<div class="flex items-center">
+<span class="font-headline font-black tracking-tighter uppercase text-[#954400]">99 SPRAY</span>
+</div>
+</header>
+<!-- Main Game Canvas (The Run Mode Viewport) -->
+<main class="relative h-screen w-full bg-surface-container overflow-hidden">
+<!-- Game World Layer -->
+<div class="absolute inset-0 z-0">
+<!-- Background: Urban City Street -->
+<div class="absolute inset-0 bg-cover bg-center grayscale-[20%] brightness-110" data-alt="cinematic third person view of a vibrant early 2000s urban city street with high energy motion blur and warm golden hour lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNdjPRIYZLb_2AMuVVCWSMkyYh9XKrbXhHimNDgF_c_ag1FnvGK6U1VKO2vYQzPp87N4UJln4elImYDmkUU1PK-lWAPMG4uYQhrTeDnHnD-cpg42YKdtlGc2ydleS5gGN0jeuvySPuAzOZyoVwFqSq0BpUVEJfL3_Pkbu3R7Ag8-jP8CYxtQ0UxN9IMaKS0-hcwWTIYXooBMbukjpFjzIGleLKz83SNx_RaWux8HU1GaoGLWuqqMiRMJeOhruvGV__8AOlCLoccutx')">
+</div>
+<!-- Speed Line Overlays -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<div class="absolute top-1/4 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-container to-transparent blur-sm"></div>
+<div class="absolute top-2/4 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent blur-sm"></div>
+<div class="absolute top-3/4 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-container to-transparent blur-sm"></div>
+</div>
+<!-- Foreground: Wooden Stall & Kit (Action Logic Placeholder) -->
+<div class="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 flex flex-col items-center justify-end">
+<!-- Jump Action Visualization -->
+<div class="relative w-64 h-64 mb-12">
+<div class="absolute bottom-0 w-full h-32 bg-secondary/80 rounded-lg skew-x-12 border-b-8 border-primary" data-alt="close-up of a rustic wooden fruit stall with crates of oranges in a busy street market setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnZxiWjghpOMsL7B4Rc0OqfduhK0x62GNbBo-Fp4qJdyS7hMhmBfmQruWESZ9_HEBYLCOxbtARCS8R0fKLQz56dU2408zO7n-xns0b7N3KMnx3focymSOBIJPDP1rnW680P7ovCV-BUzJ40KFVW3lcjTfKmh6RCdWeJ5QyI7Oyu26ikkWrWr0ZlOGAiiH8YpJ72iupfAfUtWMrYbsZrB2prcLecvxx4C6YEpGrP96e8cJKCEmhbMe4IOXwrMTOQPufMb94HXgG6-rq')">
+</div>
+<!-- Character Sprite Silhouette / Placeholder -->
+<div class="absolute bottom-20 left-1/2 -translate-x-1/2 w-48 h-64 flex items-center justify-center">
+<span class="material-symbols-outlined text-[120px] text-primary drop-shadow-2xl" data-icon="directions_run" style="font-variation-settings: 'FILL' 1;">directions_run</span>
+</div>
+<!-- Pigeons Scattering Effect -->
+<div class="absolute -top-10 -left-20 animate-pulse">
+<span class="material-symbols-outlined text-outline-variant text-4xl rotate-45" data-icon="flutter_dash">flutter_dash</span>
+</div>
+<div class="absolute -top-5 right-0 animate-bounce">
+<span class="material-symbols-outlined text-outline-variant text-3xl -rotate-12" data-icon="flutter_dash">flutter_dash</span>
+</div>
+</div>
+<!-- Graffiti 'Kit' on passing wall -->
+<div class="absolute right-[-10%] top-20 w-48 h-64 bg-surface-container-highest/20 backdrop-blur-sm rotate-6 p-4 border-l-8 border-tertiary-container">
+<h2 class="font-headline font-black text-6xl text-tertiary drop-shadow-[4px_4px_0_rgba(47,248,1,0.5)] italic uppercase">KIT</h2>
+<p class="font-label text-tertiary-dim text-xs font-bold uppercase tracking-widest mt-2">Street Cred +500</p>
+</div>
+</div>
+</div>
+<!-- HUD Layer -->
+<div class="absolute inset-0 z-10 p-8 pointer-events-none flex flex-col justify-between">
+<!-- Top HUD: Combo & Distance -->
+<div class="flex justify-between items-start mt-16">
+<!-- Combo Multiplier Card -->
+<div class="bg-primary-container p-6 rounded-lg rotate-[-2deg] shadow-lg border-b-8 border-primary flex flex-col items-center">
+<span class="font-label text-on-primary-container text-xs font-black uppercase tracking-tighter">COMBO</span>
+<span class="font-headline text-5xl font-black text-on-primary-container tracking-tighter">x2.5</span>
+<div class="w-full h-2 bg-on-primary-container/20 mt-2 rounded-full overflow-hidden">
+<div class="w-3/4 h-full bg-on-primary-container"></div>
+</div>
+</div>
+<!-- Distance Meter -->
+<div class="bg-surface-container-lowest/90 backdrop-blur p-4 rounded-lg shadow-xl border-l-4 border-secondary rotate-1 flex items-baseline gap-2">
+<span class="font-headline text-4xl font-black text-on-surface">1,248</span>
+<span class="font-label text-on-surface-variant text-sm font-bold">METERS</span>
+</div>
+</div>
+<!-- Mid HUD: Interaction Prompts -->
+<div class="flex justify-center gap-12 mb-24">
+<!-- Jump Swipe -->
+<div class="flex flex-col items-center gap-2 opacity-80 scale-90">
+<div class="w-16 h-24 rounded-full bg-surface-container-lowest/40 border-4 border-dashed border-white flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl animate-bounce" data-icon="north">north</span>
+</div>
+<span class="font-label text-white text-[10px] font-black uppercase tracking-widest bg-black/40 px-2 py-1 rounded">JUMP</span>
+</div>
+<!-- Wall Run Swipe -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-24 h-16 rounded-xl bg-tertiary-container/80 shadow-[0_0_20px_rgba(47,248,1,0.4)] border-4 border-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container text-4xl" data-icon="east">east</span>
+</div>
+<span class="font-label text-tertiary-container text-[10px] font-black uppercase tracking-widest bg-black/60 px-2 py-1 rounded">WALL RUN</span>
+</div>
+<!-- Slide Swipe -->
+<div class="flex flex-col items-center gap-2 opacity-80 scale-90">
+<div class="w-16 h-24 rounded-full bg-surface-container-lowest/40 border-4 border-dashed border-white flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="south">south</span>
+</div>
+<span class="font-label text-white text-[10px] font-black uppercase tracking-widest bg-black/40 px-2 py-1 rounded">SLIDE</span>
+</div>
+</div>
+<!-- Bottom HUD: Speedometer -->
+<div class="flex justify-between items-end mb-20">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full bg-on-surface/90 border-4 border-primary-container flex flex-col items-center justify-center rotate-[-15deg] shadow-2xl">
+<span class="font-label text-primary-container text-[10px] font-black tracking-widest uppercase mb-[-4px]">KMPH</span>
+<span class="font-headline text-4xl font-black text-white italic">42</span>
+<!-- Needle -->
+<div class="absolute top-1/2 left-1/2 w-14 h-1 bg-secondary origin-left -rotate-45 -translate-y-1/2"></div>
+</div>
+<!-- Tape Decoration -->
+<div class="absolute -top-2 -right-2 w-8 h-4 bg-secondary-fixed/40 rounded-sm rotate-45"></div>
+</div>
+<!-- Secondary Action / Spray -->
+<div class="relative">
+<button class="w-20 h-20 rounded-full bg-tertiary shadow-[0_8px_0_0_#0c5d00] active:translate-y-2 active:shadow-none transition-all flex items-center justify-center pointer-events-auto">
+<span class="material-symbols-outlined text-on-tertiary text-4xl" data-icon="format_paint" style="font-variation-settings: 'FILL' 1;">format_paint</span>
+</button>
+<div class="absolute -top-4 -left-4 bg-secondary text-white font-label text-[10px] font-bold px-2 py-1 rounded-full animate-pulse">TAG NOW!</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end pb-6 pt-2 px-4 bg-[#f8f6f5]/80 backdrop-blur-md border-t-2 border-[#954400]/10 shadow-[0_-8px_32px_rgba(149,68,0,0.12)] rounded-t-[2rem]">
+<!-- LOG (Active Logic: RUN MODE maps to history/log of sessions) -->
+<a class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 hover:-translate-y-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">CREW</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#ff7b04] text-white rounded-[1.5rem] px-5 py-2 rotate-1 scale-110 shadow-lg transition-all active:scale-90 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">LOG</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 hover:-translate-y-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">MAP</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 hover:-translate-y-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">MENU</span>
+</a>
+</nav>
+</body></html>

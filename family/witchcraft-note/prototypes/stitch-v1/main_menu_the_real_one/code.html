@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&amp;family=Work+Sans:wght@400;500;600&amp;family=Space_Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#b02500",
+              "on-secondary": "#ffefed",
+              "on-secondary-container": "#930410",
+              "on-error-container": "#520c00",
+              "on-surface": "#2e2f2f",
+              "surface-bright": "#f8f6f5",
+              "tertiary-dim": "#0c5d00",
+              "inverse-surface": "#0e0e0e",
+              "error-container": "#f95630",
+              "surface-container-low": "#f2f0f0",
+              "surface-variant": "#dedcdc",
+              "primary-fixed": "#ff7b04",
+              "inverse-on-surface": "#9e9d9c",
+              "secondary-fixed-dim": "#ffb0a7",
+              "on-primary-container": "#3d1800",
+              "tertiary-fixed": "#2ff801",
+              "inverse-primary": "#ff7b04",
+              "primary-fixed-dim": "#eb7000",
+              "surface-container-high": "#e4e2e2",
+              "on-surface-variant": "#5c5b5b",
+              "secondary": "#b12121",
+              "secondary-container": "#ffc3bd",
+              "on-error": "#ffefec",
+              "on-background": "#2e2f2f",
+              "surface": "#f8f6f5",
+              "on-tertiary-fixed-variant": "#0d6200",
+              "secondary-fixed": "#ffc3bd",
+              "secondary-dim": "#a01217",
+              "primary-container": "#ff7b04",
+              "on-tertiary-container": "#0b5800",
+              "tertiary-fixed-dim": "#2be800",
+              "on-tertiary-fixed": "#064200",
+              "on-secondary-fixed": "#700008",
+              "on-primary-fixed-variant": "#4c1f00",
+              "outline-variant": "#aeadac",
+              "error-dim": "#b92902",
+              "on-primary-fixed": "#000000",
+              "outline": "#777776",
+              "surface-container-highest": "#dedcdc",
+              "primary": "#954400",
+              "background": "#f8f6f5",
+              "surface-tint": "#954400",
+              "surface-dim": "#d5d4d4",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#e9e8e7",
+              "tertiary": "#0f6b00",
+              "primary-dim": "#823b00",
+              "on-secondary-fixed-variant": "#a11318",
+              "tertiary-container": "#2ff801",
+              "on-primary": "#fff0e9",
+              "on-tertiary": "#d3ffc1"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Work Sans"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .sticker-shadow {
+        filter: drop-shadow(4px 4px 0px rgba(149, 68, 0, 0.2));
+      }
+      .graffiti-tag {
+        font-family: 'Plus Jakarta Sans';
+        transform: rotate(-5deg);
+        letter-spacing: -0.05em;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background min-h-screen overflow-hidden">
+<!-- Hero Background Section -->
+<div class="fixed inset-0 z-0 h-full w-full">
+<img class="w-full h-full object-cover" data-alt="3D cartoon style 12 year old boy with curly wheat hair in orange hoodie sitting on rooftop overlooking sun-drenched stylized city at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYrjfeC_2u-9dRMSru-E2rxmoqu1NADZRlxCDnVxLFX5bBuQE51AFqeuMGulngjOGSdzYTDlMFAT5AeAwuX8JnvbxavuATrErEQ-gEFMi6bBuYGholMBcyNqxAZTdlx37nP4xl3wEDVfVjbZrkRL6S84rld1zzEG5FqI0DR97bRkx19Q4xx-8badMwG8Fes4gJQQfzqDiYfa4gAnALzLTcvgI8ajsCvhS7z_fK3lbrsodxOXIqkXIHd4dJNhQiS4PyZDPI3O4M6mSo"/>
+<!-- Sun Drenched Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent mix-blend-overlay"></div>
+<div class="absolute inset-0 bg-primary-container/10 pointer-events-none"></div>
+</div>
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#f8f6f5] border-b-4 border-[#ff7b04] shadow-[0_4px_0_0_rgba(149,68,0,0.1)]">
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 flex items-center justify-center rounded-lg bg-surface-container-highest hover:skew-x-2 transition-transform active:scale-95 text-[#954400]">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="text-2xl font-black italic text-[#954400] drop-shadow-sm font-headline tracking-tighter uppercase">
+            THE REAL ONE
+        </div>
+<div class="flex items-center gap-2">
+<div class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full font-label text-sm font-bold flex items-center gap-2 border-2 border-primary/20">
+<span class="material-symbols-outlined text-sm" data-icon="spray">sprinkler</span>
+<span>99 SPRAY</span>
+</div>
+</div>
+</header>
+<!-- Main Menu Content Canvas -->
+<main class="relative z-10 flex flex-col items-start justify-center min-h-screen pt-24 pb-32 px-8 max-w-4xl">
+<!-- Game Logo Branding -->
+<div class="mb-12">
+<div class="relative inline-block transform -rotate-2">
+<h1 class="font-headline font-black text-7xl md:text-9xl text-primary leading-none tracking-tighter uppercase drop-shadow-[0_8px_0_rgba(0,0,0,0.1)]">
+                    THE REAL<br/>ONE
+                </h1>
+<!-- Graffiti Tag Badge -->
+<div class="absolute -bottom-4 -right-8 bg-tertiary text-on-tertiary px-6 py-2 rounded-lg rotate-6 shadow-xl border-4 border-white">
+<span class="graffiti-tag font-black text-2xl uppercase italic">Kit</span>
+</div>
+</div>
+</div>
+<!-- Action Menu (Sticker Style Buttons) -->
+<nav class="flex flex-col gap-6 w-full max-w-md">
+<!-- Start Run Button -->
+<button class="group relative flex items-center gap-4 bg-primary-container text-on-primary-container p-6 rounded-lg border-b-8 border-primary transition-all hover:-translate-y-1 hover:brightness-110 active:translate-y-2 active:border-b-0">
+<div class="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<div class="flex flex-col items-start">
+<span class="font-label text-xs opacity-80 uppercase tracking-widest">Adventure Awaits</span>
+<span class="font-headline text-3xl font-black uppercase">START RUN</span>
+</div>
+<!-- "Tape" Aesthetic Element -->
+<div class="absolute -top-3 -right-3 w-12 h-6 bg-surface-variant/40 rounded-sm rotate-12"></div>
+</button>
+<div class="flex gap-4 w-full">
+<!-- Explore City Button -->
+<button class="flex-1 group relative bg-secondary-container text-on-secondary-container p-5 rounded-lg border-b-8 border-secondary-dim transition-all hover:-translate-y-1 active:translate-y-2 active:border-b-0 rotate-1">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-3xl" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-headline text-lg font-black uppercase text-center leading-tight">EXPLORE CITY</span>
+</div>
+</button>
+<!-- My Crew Button -->
+<button class="flex-1 group relative bg-surface-container-highest text-on-surface p-5 rounded-lg border-b-8 border-outline transition-all hover:-translate-y-1 active:translate-y-2 active:border-b-0 -rotate-1">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-3xl" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-headline text-lg font-black uppercase text-center leading-tight">MY CREW</span>
+</div>
+</button>
+</div>
+</nav>
+<!-- Dynamic Sticker/Badge Decor -->
+<div class="mt-12 hidden md:block">
+<div class="bg-surface-container-lowest/80 backdrop-blur-md p-4 rounded-xl shadow-lg border-2 border-primary/10 rotate-2 flex items-center gap-4">
+<div class="w-12 h-12 bg-tertiary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div>
+<p class="font-label text-xs uppercase text-outline">Latest Tag Found</p>
+<p class="font-body font-bold text-on-surface">Central Subway Station</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end pb-6 pt-2 px-4 bg-[#f8f6f5]/80 backdrop-blur-md rounded-t-[2rem] border-t-2 border-[#954400]/10 shadow-[0_-8px_32px_rgba(149,68,0,0.12)]">
+<!-- CREW (Active by intent of 'Menu' navigation in this specific app shell context) -->
+<a class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">CREW</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">LOG</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">MAP</span>
+</a>
+<!-- MENU is active -->
+<a class="flex flex-col items-center justify-center bg-[#ff7b04] text-white rounded-[1.5rem] px-5 py-2 rotate-1 scale-110 shadow-lg" href="#">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase">MENU</span>
+</a>
+</nav>
+<!-- Floating Sticker Decor -->
+<div class="fixed bottom-32 right-8 pointer-events-none select-none hidden lg:block">
+<div class="relative">
+<div class="bg-secondary p-4 rounded-lg text-on-secondary font-headline font-black text-2xl rotate-12 shadow-2xl border-4 border-white uppercase">
+                New<br/>Skins!
+            </div>
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-primary-container rounded-full flex items-center justify-center rotate-[-15deg] shadow-lg border-4 border-white">
+<span class="material-symbols-outlined text-white" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Work+Sans:wght@400;500&amp;family=Space_Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#b02500",
+              "on-secondary": "#ffefed",
+              "on-secondary-container": "#930410",
+              "on-error-container": "#520c00",
+              "on-surface": "#2e2f2f",
+              "surface-bright": "#f8f6f5",
+              "tertiary-dim": "#0c5d00",
+              "inverse-surface": "#0e0e0e",
+              "error-container": "#f95630",
+              "surface-container-low": "#f2f0f0",
+              "surface-variant": "#dedcdc",
+              "primary-fixed": "#ff7b04",
+              "inverse-on-surface": "#9e9d9c",
+              "secondary-fixed-dim": "#ffb0a7",
+              "on-primary-container": "#3d1800",
+              "tertiary-fixed": "#2ff801",
+              "inverse-primary": "#ff7b04",
+              "primary-fixed-dim": "#eb7000",
+              "surface-container-high": "#e4e2e2",
+              "on-surface-variant": "#5c5b5b",
+              "secondary": "#b12121",
+              "secondary-container": "#ffc3bd",
+              "on-error": "#ffefec",
+              "on-background": "#2e2f2f",
+              "surface": "#f8f6f5",
+              "on-tertiary-fixed-variant": "#0d6200",
+              "secondary-fixed": "#ffc3bd",
+              "secondary-dim": "#a01217",
+              "primary-container": "#ff7b04",
+              "on-tertiary-container": "#0b5800",
+              "tertiary-fixed-dim": "#2be800",
+              "on-tertiary-fixed": "#064200",
+              "on-secondary-fixed": "#700008",
+              "on-primary-fixed-variant": "#4c1f00",
+              "outline-variant": "#aeadac",
+              "error-dim": "#b92902",
+              "on-primary-fixed": "#000000",
+              "outline": "#777776",
+              "surface-container-highest": "#dedcdc",
+              "primary": "#954400",
+              "background": "#f8f6f5",
+              "surface-tint": "#954400",
+              "surface-dim": "#d5d4d4",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#e9e8e7",
+              "tertiary": "#0f6b00",
+              "primary-dim": "#823b00",
+              "on-secondary-fixed-variant": "#a11318",
+              "tertiary-container": "#2ff801",
+              "on-primary": "#fff0e9",
+              "on-tertiary": "#d3ffc1"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Work Sans"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.scrolled-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDERWn74_QYbGYspr6ThWdlqxBcCfeN1cwrLGwixZei6qCv1_feWsLeEJZ5_dleykoVe9QYKsindhxV3hFXbXALwujwPH4wY5nfsn61bT3Tnsw4SVO1FS9l2KSyARg1187SdnAra31jiZ41gGZU59Vh5tef8xFjrjC97qaiT0Jj3aYOHC7Xi0f--TKCm2Fgrpnta0OK-2wmgKdd3LUePtpmABO3ZmcOUhOOS3ByFFyaS4Q0t5ix6J-vBDj-KTQN6PmQ9c1SZWegOgv7);
+    background-blend-mode: multiply
+    }
+.polaroid-shadow {
+    box-shadow: 0 8px 24px rgba(149, 68, 0, 0.15)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background min-h-screen scrolled-bg overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#f8f6f5] border-b-4 border-[#ff7b04] shadow-[0_4px_0_0_rgba(149,68,0,0.1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#954400]">settings</span>
+<h1 class="font-headline font-black tracking-tighter uppercase text-2xl italic text-[#954400] drop-shadow-sm">THE REAL ONE</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label text-xs font-bold text-[#2e2f2f] bg-surface-container-high px-3 py-1 rounded-full border-2 border-[#954400]/10">99 SPRAY</span>
+<button class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label text-xs font-extrabold hover:skew-x-2 transition-transform active:scale-95">BACK TO MENU</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto relative">
+<!-- Page Title sticker -->
+<div class="mb-12 relative">
+<div class="inline-block bg-tertiary-container -rotate-2 p-4 shadow-lg rounded-sm border-2 border-tertiary-dim/10">
+<h2 class="font-headline font-black text-4xl text-on-tertiary-container tracking-tight">KIT'S CREW</h2>
+<p class="font-label text-sm uppercase font-bold text-on-tertiary-container/70 mt-1">Founding Members &amp; Legends</p>
+</div>
+<!-- Decorative "Tape" -->
+<div class="absolute -top-3 left-10 w-16 h-8 bg-surface-variant/40 rotate-12 backdrop-blur-sm"></div>
+</div>
+<!-- The "Wall" Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+<!-- Derzey Polaroid -->
+<div class="relative group">
+<!-- Polaroid Frame -->
+<div class="bg-surface-container-lowest p-5 pb-16 polaroid-shadow -rotate-3 transition-transform hover:rotate-0 duration-300 rounded-sm">
+<div class="aspect-square bg-surface-container-high overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale-[0.2] contrast-125" data-alt="energetic teenager in a stylized urban gas mask and vibrant streetwear posing with high energy in front of a graffiti wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxKFdo6fVAcrGHJZ9gO2DyZC6YtDqPgoOM1t-WgzMak1r0Ts7kvGSLuT96DdhA9HltZcf3pCsL-Ze7BucIwKxAGH8dD5_kklMLEclaIHbBwsSjGcAhFt99ipl1qOhWVXvH6x5NoTIPddQu-q9JObt6NNwXq3Dj40mkBKlO9GyUSVlHsnR3DDhxOEvs8uxNnQMj0w2B4bXm9wvbTDEZUHi4l7BjkEl0Rr2zn5dvm9xNcLwNNe7rfMeOXkOph8s6VVtb9AonQSRchxSR"/>
+<!-- Status Sticker -->
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full font-label text-xs font-black shadow-md animate-pulse">
+                            ONLINE
+                        </div>
+</div>
+<div class="mt-6 flex flex-col gap-2">
+<span class="font-headline font-black text-3xl text-primary leading-none uppercase">DERZEY</span>
+<p class="font-body text-sm text-on-surface-variant italic">"Chaos is just another rhythm."</p>
+</div>
+</div>
+<!-- Bio "Note" pinned below -->
+<div class="absolute -bottom-6 -right-4 w-56 bg-secondary-container p-4 rotate-2 shadow-xl rounded-sm border-l-4 border-secondary">
+<h3 class="font-label text-xs font-extrabold text-on-secondary-container mb-1">FRIENDSHIP BIO</h3>
+<p class="font-body text-xs text-on-secondary-container leading-relaxed">Derzey found me behind the old arcade. Taught me how to spray without getting caught. Unlocked after the 'Midnight Run' mission.</p>
+</div>
+<!-- Tape pieces -->
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-surface-variant/30 rotate-3"></div>
+</div>
+<!-- Archi Polaroid -->
+<div class="relative group md:mt-16">
+<!-- Polaroid Frame -->
+<div class="bg-surface-container-lowest p-5 pb-16 polaroid-shadow rotate-2 transition-transform hover:rotate-0 duration-300 rounded-sm">
+<div class="aspect-square bg-surface-container-high overflow-hidden relative">
+<img class="w-full h-full object-cover sepia-[0.3]" data-alt="calm older mentor figure with a vintage acoustic guitar sitting on a porch at sunset with soft golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhGLV9QGL7fc7uFP_ONszKBZm4ezL8WuT0yduJb094SsYTlBMit84wMGTV2jBoMmfjm6YtHGjiP5o2HBvNUR0Qu8kkFNow0kIK0VCPqF9196-bNh5z2qt-pQn8TywDD7peDPIdbH027ehFcG201Jfhv4zAvHFhSdnLhQ8ql7VRmDtM0TsdeTJVXS10QmQm9CJxM1OZmToae1fNOHkU3MxnCq7eHug4FJpsEPXwUh9U9RFF0sdN5ZfEi3vRLWeQOpnxgk8eTlkd9p01"/>
+<!-- Status Sticker -->
+<div class="absolute top-4 right-4 bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label text-xs font-black shadow-md">
+                            UNLOCKED
+                        </div>
+</div>
+<div class="mt-6 flex flex-col gap-2">
+<span class="font-headline font-black text-3xl text-primary leading-none uppercase">ARCHI</span>
+<p class="font-body text-sm text-on-surface-variant italic">"Measure twice, play once."</p>
+</div>
+</div>
+<!-- Bio "Note" pinned below -->
+<div class="absolute -bottom-10 -left-6 w-56 bg-surface-container-highest p-4 -rotate-3 shadow-xl rounded-sm border-t-4 border-primary">
+<h3 class="font-label text-xs font-extrabold text-on-surface mb-1">FRIENDSHIP BIO</h3>
+<p class="font-body text-xs text-on-surface leading-relaxed">The neighborhood's soul. He fixed my first board and taught me that music is a weapon. Met him at the 'East Side Jazz' bar.</p>
+</div>
+<!-- Sticker decorative -->
+<div class="absolute top-0 -right-8 w-16 h-16 bg-[#ff7b04] rounded-full flex items-center justify-center -rotate-12 shadow-lg border-2 border-dashed border-white/40">
+<span class="material-symbols-outlined text-white text-3xl">music_note</span>
+</div>
+</div>
+</div>
+<!-- Random Scattered Elements (Stickers) -->
+<div class="mt-24 flex flex-wrap gap-8 justify-center opacity-80 pointer-events-none">
+<div class="bg-surface-container-low px-4 py-2 rounded-lg border-2 border-outline-variant rotate-12 font-label font-bold text-xs uppercase tracking-widest">
+                STAY REAL
+            </div>
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center -rotate-6 shadow-md">
+<span class="material-symbols-outlined text-on-secondary">favorite</span>
+</div>
+<div class="bg-tertiary-container px-3 py-1 -rotate-3 shadow-sm font-headline font-black text-on-tertiary-container italic">
+                CREW_01
+            </div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end pb-6 pt-2 px-4 bg-[#f8f6f5]/80 backdrop-blur-md border-t-2 border-[#954400]/10 shadow-[0_-8px_32px_rgba(149,68,0,0.12)] rounded-t-[2rem]">
+<!-- CREW (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#ff7b04] text-white rounded-[1.5rem] px-5 py-2 rotate-1 scale-110 shadow-lg group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-label text-[10px] font-bold uppercase mt-1">CREW</span>
+</a>
+<!-- LOG -->
+<a class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 hover:-translate-y-1 transition-all" href="#">
+<span class="material-symbols-outlined">palette</span>
+<span class="font-label text-[10px] font-bold uppercase mt-1">LOG</span>
+</a>
+<!-- MAP -->
+<a class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 hover:-translate-y-1 transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label text-[10px] font-bold uppercase mt-1">MAP</span>
+</a>
+<!-- MENU -->
+<a class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 hover:-translate-y-1 transition-all" href="#">
+<span class="material-symbols-outlined">menu</span>
+<span class="font-label text-[10px] font-bold uppercase mt-1">MENU</span>
+</a>
+</nav>
+</body></html>

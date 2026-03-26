@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE REAL ONE - Encounter</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Work+Sans:wght@400;500;600&amp;family=Space_Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#b02500",
+                        "on-secondary": "#ffefed",
+                        "on-secondary-container": "#930410",
+                        "on-error-container": "#520c00",
+                        "on-surface": "#2e2f2f",
+                        "surface-bright": "#f8f6f5",
+                        "tertiary-dim": "#0c5d00",
+                        "inverse-surface": "#0e0e0e",
+                        "error-container": "#f95630",
+                        "surface-container-low": "#f2f0f0",
+                        "surface-variant": "#dedcdc",
+                        "primary-fixed": "#ff7b04",
+                        "inverse-on-surface": "#9e9d9c",
+                        "secondary-fixed-dim": "#ffb0a7",
+                        "on-primary-container": "#3d1800",
+                        "tertiary-fixed": "#2ff801",
+                        "inverse-primary": "#ff7b04",
+                        "primary-fixed-dim": "#eb7000",
+                        "surface-container-high": "#e4e2e2",
+                        "on-surface-variant": "#5c5b5b",
+                        "secondary": "#b12121",
+                        "secondary-container": "#ffc3bd",
+                        "on-error": "#ffefec",
+                        "on-background": "#2e2f2f",
+                        "surface": "#f8f6f5",
+                        "on-tertiary-fixed-variant": "#0d6200",
+                        "secondary-fixed": "#ffc3bd",
+                        "secondary-dim": "#a01217",
+                        "primary-container": "#ff7b04",
+                        "on-tertiary-container": "#0b5800",
+                        "tertiary-fixed-dim": "#2be800",
+                        "on-tertiary-fixed": "#064200",
+                        "on-secondary-fixed": "#700008",
+                        "on-primary-fixed-variant": "#4c1f00",
+                        "outline-variant": "#aeadac",
+                        "error-dim": "#b92902",
+                        "on-primary-fixed": "#000000",
+                        "outline": "#777776",
+                        "surface-container-highest": "#dedcdc",
+                        "primary": "#954400",
+                        "background": "#f8f6f5",
+                        "surface-tint": "#954400",
+                        "surface-dim": "#d5d4d4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#e9e8e7",
+                        "tertiary": "#0f6b00",
+                        "primary-dim": "#823b00",
+                        "on-secondary-fixed-variant": "#a11318",
+                        "tertiary-container": "#2ff801",
+                        "on-primary": "#fff0e9",
+                        "on-tertiary": "#d3ffc1"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Work Sans"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .graffiti-text {
+            text-shadow: 4px 4px 0px #954400;
+        }
+        .speech-bubble-tail::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 20%;
+            border-width: 20px 20px 0 0;
+            border-style: solid;
+            border-color: #ffffff transparent transparent transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#f8f6f5] border-b-4 border-[#ff7b04] shadow-[0_4px_0_0_rgba(149,68,0,0.1)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#954400] text-2xl" data-icon="settings">settings</span>
+<h1 class="font-headline font-black tracking-tighter uppercase text-2xl italic text-[#954400] drop-shadow-sm">THE REAL ONE</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label font-bold text-xs bg-primary-container text-on-primary-container px-3 py-1 rounded-full rotate-[-2deg]">99 SPRAY</span>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow pt-24 pb-32 px-4 md:px-8 max-w-5xl mx-auto w-full">
+<!-- Encounter Scene Section -->
+<section class="relative h-[442px] min-h-[400px] w-full bg-surface-container-low rounded-lg overflow-hidden mb-12 shadow-2xl flex items-end">
+<!-- Background Image: Narrow alley with "Kit" tag -->
+<div class="absolute inset-0 z-0">
+<img alt="Close-up of a vibrant urban alleyway covered in graffiti tags with golden hour lighting hitting the bricks" class="w-full h-full object-cover grayscale-[20%] sepia-[10%] opacity-90" data-alt="narrow sun-drenched urban alleyway with colorful graffiti tags on brick walls, golden hour light filtering through tall buildings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF5oCCjHa8dJroyxZF96Bw9ka94cgmMnZEveB6ixgdFTM882BTRoOSXgz31BoR-ytd6wXTJNAU82B21LsZkAMHxQeOL2GHOp7Agi8tcHZJz4SWvQYJTtW558Q9YAZW3rjCbc0SFyeWB3dsB4zRjeUlRpciSzT9xuovm4nOgMFbN18dEXf6eurmpS0Nbn2kd-biHIz7hpx4CVRS15NtCZlR9O8Y4nNRLYTjUF_OgSRc9ukLKTIjUwJ-mB9B1sgGWmFd9k0wjF9gmgd_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<!-- Graffiti "Kit" Tag -->
+<div class="absolute top-20 right-10 -rotate-12 z-10">
+<h2 class="font-headline font-black text-6xl text-tertiary-container graffiti-text">Kit</h2>
+</div>
+<!-- Characters Overlay -->
+<div class="relative z-20 flex justify-between items-end w-full px-4 md:px-12 pb-4">
+<!-- Kit (POV side) -->
+<div class="w-1/3 max-w-[200px] -ml-4 md:ml-0 translate-y-8">
+<img alt="Stylized young explorer in urban gear" class="w-full h-auto drop-shadow-2xl brightness-110" data-alt="cartoonish close up of a cool young explorer character with oversized street fashion and messy hair, energetic expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtchiL_66Kfbfa05kL7fLveHV1QP7tFDWS8Un3W_nVZ99XcWs65X-01EY4EvkvfCq76V3uU3pUfVnJoe7e9cUc6Fz1pbV7FufMgwtzMlDnMc1hYiJm5XUbw-rEpiGcoT_vJux3WZ_wlE7mbylMyy1UDecP5szZFpKL4si7kLt3cjsOu-1BryGeowb_S0vJDYZK9cIBdcVx9ffqWsjMkpjRI-RUc_L_r7vnFOCLZwr3QmCs4hpjp4e6k1ehpOv8-C8DA-kXeGd_sVft"/>
+</div>
+<!-- Derzey (Central figure) -->
+<div class="w-1/2 max-w-[320px] translate-y-4">
+<div class="relative">
+<img alt="Energetic boy in a gas mask and yellow jacket" class="w-full h-auto drop-shadow-[0_20px_50px_rgba(255,123,4,0.3)]" data-alt="dynamic close-up of a energetic boy wearing a cool vintage gas mask and a bright orange streetwear jacket in a graffiti alley" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB6QsBo65ps3L-sWDQS8ZIEwRWlS-RbE-lrw20As2SgR7DneJpnvXeenOAzGWR_WuBDB_GwNBDKLYuvTJ31vjojTXKJTSdbYmee7EvmkRQ0__9iq85L60-YoZzzQDu3dHmHUWpZWZ_MPcEAUQJvlUliLpn5gvchuux-WbXkEQzjYcbwV-v9z6BP21fuWF8CSM9TAr1ktywS-aIyoB7nZJc9EOL5Qt1zHCQ38fU79rht5YcpDo6mZsPFXPtkyTqlR-ucyfHa0IiQmwY"/>
+<!-- Tape Detail -->
+<div class="absolute -top-2 -left-2 bg-secondary-fixed w-12 h-6 rounded-sm opacity-60 rotate-[-15deg]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dialogue & Actions -->
+<div class="space-y-12">
+<!-- Speech Bubble -->
+<div class="relative bg-surface-container-lowest p-6 rounded-lg shadow-xl border-l-8 border-primary-container max-w-2xl mx-auto speech-bubble-tail">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="face">face</span>
+</div>
+</div>
+<div>
+<span class="font-label text-primary font-bold uppercase text-xs tracking-widest block mb-1">Derzey</span>
+<p class="font-body text-xl md:text-2xl font-semibold leading-tight text-on-surface">
+                            "Yo! Nice tag. Want to see a <span class="bg-tertiary-container px-2 rounded-sm rotate-2 inline-block">REAL spot</span>?"
+                        </p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+<!-- SURE! -->
+<button class="group relative bg-primary-container text-on-primary-container py-5 px-8 rounded-lg font-headline font-black text-xl tracking-tight shadow-lg hover:bg-primary-fixed-dim hover:skew-x-2 transition-all active:scale-95 duration-100 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                    SURE!
+                    <div class="absolute -top-1 -right-1 bg-surface-variant w-8 h-4 opacity-40 rounded-sm rotate-12"></div>
+</button>
+<!-- WHO ARE YOU? -->
+<button class="group relative bg-surface-container-highest text-on-surface py-5 px-8 rounded-lg font-headline font-black text-xl tracking-tight shadow-md hover:bg-surface-variant hover:skew-x-2 transition-all active:scale-95 duration-100 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                    WHO ARE YOU?
+                </button>
+<!-- MAYBE LATER -->
+<button class="group relative bg-surface-container-low text-outline py-5 px-8 rounded-lg font-headline font-bold text-xl tracking-tight hover:text-on-surface hover:skew-x-2 transition-all active:scale-95 duration-100 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+                    MAYBE LATER
+                </button>
+</div>
+</div>
+<!-- Encounter Details Sticker Grid -->
+<div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bg-surface-container-high p-4 rounded-lg rotate-[-1deg] shadow-sm flex flex-col gap-2">
+<span class="font-label text-[10px] text-outline uppercase font-bold">Encounter Type</span>
+<span class="font-headline font-black text-lg text-primary">NEW CREW?</span>
+</div>
+<div class="bg-tertiary-container/20 p-4 rounded-lg rotate-[2deg] shadow-sm flex flex-col gap-2 border-2 border-tertiary-container/30">
+<span class="font-label text-[10px] text-on-tertiary-fixed-variant uppercase font-bold">Vibe Check</span>
+<span class="font-headline font-black text-lg text-tertiary-dim">EXCITING</span>
+</div>
+<div class="bg-secondary-container/20 p-4 rounded-lg rotate-[-2deg] shadow-sm flex flex-col gap-2 border-2 border-secondary-container/30">
+<span class="font-label text-[10px] text-on-secondary-fixed uppercase font-bold">Danger Level</span>
+<span class="font-headline font-black text-lg text-secondary">MINIMAL</span>
+</div>
+<div class="bg-surface-container-highest p-4 rounded-lg rotate-[1deg] shadow-sm flex flex-col gap-2">
+<span class="font-label text-[10px] text-outline uppercase font-bold">Location</span>
+<span class="font-headline font-black text-lg text-on-surface">BACK ALLEY</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end pb-6 pt-2 px-4 bg-[#f8f6f5]/80 backdrop-blur-md border-t-2 border-[#954400]/10 shadow-[0_-8px_32px_rgba(149,68,0,0.12)] rounded-t-[2rem]">
+<div class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">CREW</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#ff7b04] text-white rounded-[1.5rem] px-5 py-2 rotate-1 scale-110 shadow-lg cursor-default">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">LOG</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">MAP</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2e2f2f] px-4 py-2 hover:bg-[#ff7b04]/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<span class="font-['Space_Grotesk'] text-[10px] font-bold uppercase mt-1">MENU</span>
+</div>
+</nav>
+</body></html>
