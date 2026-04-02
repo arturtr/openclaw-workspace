@@ -1,11 +1,6 @@
 # Инструкции для Кузи (agent=kuzya)
 
-## Git из Telegram (exec approvals)
-
-Shell-цепочки (`cd ... && git add && git commit`) блокируются exec approvals. Использовать прямые вызовы:
-- `/usr/bin/git -C /home/artur/Dropbox/openclaw-workspace add <file>`
-- `/usr/bin/git -C /home/artur/Dropbox/openclaw-workspace commit -m "..."`
-- Для daily notes: `/usr/bin/git -C /home/artur/Dropbox/openclaw-workspace add memory/YYYY-MM-DD.md`
+## Правило файлов
 
 **Перед Write** — всегда Read. Если файл существует → Edit (append), не Write.
 
