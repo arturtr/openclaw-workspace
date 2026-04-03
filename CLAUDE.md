@@ -200,6 +200,17 @@ git log --oneline v2026.X.XX..v2026.Y.YY   # commits between versions
 # or read CHANGELOG.md directly
 ```
 
+### Exec Approvals (agents running shell commands from Telegram)
+
+Two configs must agree — `minSecurity()` picks the stricter of the two:
+
+1. `~/.openclaw/openclaw.json` → `tools.exec.security: "full"` (upper bound)
+2. `~/.openclaw/exec-approvals.json` → `agents.*.security: "full"` (per-agent, wildcard `"*"` covers all)
+
+Without `tools.exec.security` in openclaw.json, default is `"allowlist"` — blocks all shell commands except allowlisted binaries, even if exec-approvals.json says `"full"`.
+
+Options: `"deny"` | `"allowlist"` | `"full"`
+
 ### Diagnosing Failures
 
 | What to check | Where |
