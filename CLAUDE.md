@@ -88,6 +88,10 @@ If no recent daily note exists — falls back to the latest available file in me
 
 Files are the only continuity between sessions. Mental notes don't survive restarts.
 
+**Structure:** Each thematic file has YAML frontmatter (`name`, `description`, `type`, `updated`).
+Types: `context` (people/family), `project` (active work), `reference` (stable lookup), `process` (rituals with rules).
+Full index with types and reading triggers: `MEMORY.md`.
+
 **Daily notes:**
 - `memory/YYYY-MM-DD.md` — Kuzya (основной агент)
 - `memory/YYYY-MM-DD-ember.md` — Ember (agent=ember-yulia)
@@ -113,7 +117,10 @@ Files are the only continuity between sessions. Mental notes don't survive resta
 - User explains something with effort → write to thematic file immediately, not just daily note
 - "Запомни навсегда" → thematic file only (not daily note)
 - Every file change → git commit
-- New file → update workspace map in `MEMORY.md`
+- New file → update index in `MEMORY.md`
+- **Deduplication**: daily note = chronicle ("decided X today"), thematic file = essence ("decision: X")
+- **Freshness**: memory is a point-in-time snapshot — verify before acting on entries >30 days old
+- **Exclusions**: no code/commands, no prices/rates, no chat transcripts, no cross-agent edits (see MEMORY.md)
 - **Double-write rule**: creating a file in a subdirectory (e.g., `tea/clients/`) requires updating the corresponding thematic summary (e.g., `memory/tea.md`) in the same session — Kuzya reads summaries, not subdirectories
 - **Mailbox protocol** (mark-for-ember.md / ember-for-mark.md): 3 sections — Непрочитанное → В работе → Архив. Never compress original text when moving — only append fields. «К сведению» entries must be saved to a thematic file + add `**Сохранено в:**` in archive.
 
@@ -283,7 +290,7 @@ Uses Groq (`whisper-large-v3-turbo`) via `GROQ_API_KEY`. Auto-detected — no co
 - Checked: 0=empty, 1=done, 2=cancelled. State is pin (0/1), NOT completion
 - Shared projects: API returns only owned projects. Shared → use owner's token
 - MCP `listTasks` with `projectId` filter may return empty despite tasks existing (known bug)
-- MCP `createTask` with `projectId` fails intermittently → workaround: create without project, then `updateTask` to set projectId
+- MCP `createTask` with `projectId` fails intermittently. `updateTask` with `projectId` also returns 400 — moving tasks to projects only works via Singularity UI
 - OpenAPI spec (full field schemas): `https://api.singularity-app.com/v2/api-json` (Swagger UI at `/v2/api` needs JS, useless for WebFetch)
 - Full field reference: `scripts/singularity-api.md`
 
