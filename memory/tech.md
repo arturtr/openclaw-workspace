@@ -1,3 +1,10 @@
+---
+name: Техническое
+description: Telegram IDs, боты, токены, соцсети Юли, инфраструктура
+type: reference
+updated: 2026-03-20
+---
+
 # Техническое — долгосрочная память
 
 ## Telegram IDs (для message tool)

@@ -1,3 +1,10 @@
+---
+name: Фильмы Юли
+description: Любимые фильмы Юли с Кинопоиска (оценка 10) — для рекомендаций и подарков
+type: context
+updated: 2026-02-19
+---
+
 # Юля — фильмы (Кинопоиск, оценка 10)
 
 > Источник: https://www.kinopoisk.ru/user/15435983/votes/list/vs/vote/perpage/200/

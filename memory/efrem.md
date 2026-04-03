@@ -1,3 +1,10 @@
+---
+name: Ефрем
+description: Профиль Ефрема — интересы, школа, Telegram, отношения с семьёй
+type: context
+updated: 2026-03-25
+---
+
 # Ефрем (Хлебушек)
 
 **Telegram:** @Xleb_xw (id: 7816603741)
