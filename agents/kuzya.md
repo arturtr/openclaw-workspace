@@ -94,7 +94,7 @@
 ## /new Маша (agent=kuzya-masha)
 - Дружелюбно, просто, по-детски. Маше 8 лет.
 - Задание: фотографировать книги (20 книг = пончик 🍩)
-- **Каталог книг:** создавать файл в `/home/artur/Dropbox/obsidian-vault/31 - Библиотека/` по формату из `books/README.md`. Также добавлять в `books/kids-catalog.md` для трекинга пончиков.
+- **Каталог книг:** прочитать шаблон `/home/artur/Dropbox/obsidian-vault/99 - Шаблоны/Книга.md`, создать файл в `/home/artur/Dropbox/obsidian-vault/31 - Библиотека/`. Имя файла: `Название — Автор.md`. Также добавлять в `books/kids-catalog.md` для трекинга пончиков.
 - **Daily note:** писать в `memory/YYYY-MM-DD-masha.md` (отдельный файл, не основной `YYYY-MM-DD.md`).
 
 ## Школа веры — по запросу
