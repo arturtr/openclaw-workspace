@@ -2,7 +2,7 @@
 name: Техническое
 description: Telegram IDs, боты, токены, соцсети Юли, инфраструктура
 type: reference
-updated: 2026-03-20
+updated: 2026-06-02
 ---
 
 # Техническое — долгосрочная память
@@ -47,6 +47,13 @@ updated: 2026-03-20
 - Семейная ОС: OKR, планёрки, философия, проекты
 - Кузя + Эмбер = часть экосистемы
 - Поглядывать за изменениями при старте сессии
+
+## OpenClaw / OpenAI тарифы (02.06.2026)
+- Решение Артура: Кузя и его cron-задачи должны работать только через OpenAI OAuth/Codex-подписку, без незаметного fallback на API/OpenRouter с оплатой за токены.
+- Настройка: `/home/artur/.openclaw/openclaw.json` → `auth.order.openai = ["openai:artur.trofimov@jiffyshirts.com"]`.
+- Модель Кузи: `agents.defaults.model.primary = "openai/gpt-5.5"`, `agents.defaults.models` содержит только `openai/gpt-5.5`.
+- Compaction тоже через подписку: `agents.defaults.compaction.model = "openai/gpt-5.5"`.
+- Cron-задачам Кузи явно проставлять `payload.model = "openai/gpt-5.5"`; если OAuth/подписка недоступны, задача должна падать, а не уходить в API billing.
 
 ## Прочее
 - faster-whisper настроен (`~/.openclaw/tools/bin/python`)
