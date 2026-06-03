@@ -2,7 +2,7 @@
 name: Техническое
 description: Telegram IDs, боты, токены, соцсети Юли, инфраструктура
 type: reference
-updated: 2026-06-02
+updated: 2026-06-03
 ---
 
 # Техническое — долгосрочная память
@@ -54,6 +54,7 @@ updated: 2026-06-02
 - Модель Кузи: `agents.defaults.model.primary = "openai/gpt-5.5"`, `agents.defaults.models` содержит только `openai/gpt-5.5`.
 - Compaction тоже через подписку: `agents.defaults.compaction.model = "openai/gpt-5.5"`.
 - Cron-задачам Кузи явно проставлять `payload.model = "openai/gpt-5.5"`; если OAuth/подписка недоступны, задача должна падать, а не уходить в API billing.
+- После долгого простоя OpenClaw 02.06.2026 проведена ревизия: убрана зависшая сезонная cron-задача 芒种 (Mángzhòng), исправлены маршруты моделей, права конфигов, owner-команды и выровнен `chinese-vocab` после параллельных cron-записей.
 
 ## Прочее
 - faster-whisper настроен (`~/.openclaw/tools/bin/python`)
